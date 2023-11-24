@@ -2,6 +2,7 @@ from django.db import models
 from .genres import GENRES  
 from .platforms import PLATFORMS
 from .stars import STARS
+from .years import YEARS
 
 
 class Category(models.Model):
@@ -26,6 +27,7 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     genre = models.CharField(max_length=100, choices=GENRES, null=True, blank=True)
     platform = models.CharField(max_length=100, choices=PLATFORMS, null=True, blank=True)
+    year = models.IntegerField(choices=YEARS, null=True, blank=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(choices=STARS, max_digits=2, decimal_places=1, default=0)
