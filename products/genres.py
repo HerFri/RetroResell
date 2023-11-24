@@ -1,0 +1,15 @@
+GENRES = [
+    ("Action", "Action"),
+    ("Adventure", "Adventure"),
+    ("Arcade", "Arcade"),
+    ("Beat Em Up", "Beat Em Up"),
+    ("Ego-Shooter", "Ego-Shooter"),
+    ("Jump 'n' Run", "Jump 'n' Run"),
+    ('Racing', 'Racing'),
+    ('RPG', 'RPG'),
+    ('Simulation', 'Simulation'),
+    ('Sports', 'Sports'),
+    ('Strategy', 'Strategy'),
+    ('Puzzle', 'Puzzle'),
+    ('Horror', 'Horror'),
+]
