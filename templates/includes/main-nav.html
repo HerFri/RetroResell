@@ -28,11 +28,11 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-games-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Games
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Nintendo</a>
-                <a href="" class="dropdown-item">Sony</a>
-                <a href="" class="dropdown-item">Handhelds</a>
-                <a href="" class="dropdown-item">All Games</a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-games-link">
+                <a href="{% url 'products' %}?platform=nes" class="dropdown-item">NES</a>
+                <a href="{% url 'products' %}?platform=snes" class="dropdown-item">SNES</a>
+                <a href="{% url 'products' %}?platform=playstation" class="dropdown-item">PlayStation</a>
+                <a href="{% url 'products' %}?platform=playstation2" class="dropdown-item">PlayStation2</a>
             </div>
         </li>
 
@@ -40,7 +40,7 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-equipment/misc-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Equipment/Miscellaneous
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+            <div class="dropdown-menu border-0" aria-labelledby="all-other-link">
                 <a href="" class="dropdown-item">Nintendo</a>
                 <a href="" class="dropdown-item">Sony</a>
                 <a href="" class="dropdown-item">Other</a>
