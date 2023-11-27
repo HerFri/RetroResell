@@ -1,6 +1,5 @@
 from django.db import models
 from .genres import GENRES  
-from .platforms import PLATFORMS
 from .stars import STARS
 from .years import YEARS
 

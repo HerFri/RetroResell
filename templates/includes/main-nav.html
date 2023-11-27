@@ -5,9 +5,10 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
-                <a href="" class="dropdown-item">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
+                <a href="{% url 'products' %}?sort=platform&direction=asc" class="dropdown-item">By Platform</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -21,7 +22,7 @@
                 <a href="{% url 'products' %}?category=consoles&platform=n64" class="dropdown-item">N64</a>
                 <a href="{% url 'products' %}?category=consoles&platform=gameboy_color" class="dropdown-item">Gameboy Color</a>
                 <a href="{% url 'products' %}?category=consoles&platform=psp" class="dropdown-item">PSP</a>
-                <a href="{% url 'products' %}?category=consoles&?platform=psp" class="dropdown-item">All Consoles</a>
+                <a href="{% url 'products' %}?category=consoles" class="dropdown-item">All Consoles</a>
             </div>
         </li>
 
@@ -33,7 +34,7 @@
                 <a href="{% url 'products' %}?category=games&platform=snes" class="dropdown-item">SNES</a>
                 <a href="{% url 'products' %}?category=games&platform=gameboy" class="dropdown-item">Gameboy</a>
                 <a href="{% url 'products' %}?category=games&platform=gameboy_color" class="dropdown-item">Gameboy Color</a>
-                <a href="{% url 'products' %}?category=games&?platform=playstation2" class="dropdown-item">All Games</a>
+                <a href="{% url 'products' %}?category=games" class="dropdown-item">All Games</a>
             </div>
         </li>
 
@@ -43,7 +44,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-other-link">
                 <a href="{% url 'products' %}?category=other&platform=snes" class="dropdown-item">SNES</a>
-                <a href="{% url 'products' %}?category=other&?platform=playstation2" class="dropdown-item">All Equipments/Miscellaneous</a>
+                <a href="{% url 'products' %}?category=other" class="dropdown-item">All Equipments/Miscellaneous</a>
             </div>
         </li>
     </ul>
