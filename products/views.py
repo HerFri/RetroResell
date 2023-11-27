@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q  # OR logic
-from .models import Product, Platform
+from .models import Product, Platform, Category
 
 # Create your views here.
 
@@ -10,9 +10,14 @@ def all_products(request):
 
     products = Product.objects.all()
     query = None
-    platform = None
+    categories = None
+    platforms = None
 
     if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
         if 'platform' in request.GET:
             platforms = request.GET['platform'].split(',')
             products = products.filter(platform__name__in=platforms)
@@ -31,6 +36,7 @@ def all_products(request):
     context = {
         'products': products,
         'search_term': query,
+        'current_categories': categories,
         'current_platforms': platforms,
     }
 

@@ -17,8 +17,8 @@
                 Consoles
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-consoles-link">
-                <a href="" class="dropdown-item">Nintendo</a>
-                <a href="" class="dropdown-item">Sony</a>
+                <a href="{% url 'products' %}?category=consoles&?platform=snes" class="dropdown-item">SNES</a>
+                <a href="{% url 'products' %}?category=consoles&?platform=playstation2" class="dropdown-item">PlayStation2</a>
                 <a href="" class="dropdown-item">Handhelds</a>
                 <a href="" class="dropdown-item">All Consoles</a>
             </div>
@@ -29,10 +29,10 @@
                 Games
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-games-link">
-                <a href="{% url 'products' %}?platform=nes" class="dropdown-item">NES</a>
-                <a href="{% url 'products' %}?platform=snes" class="dropdown-item">SNES</a>
-                <a href="{% url 'products' %}?platform=playstation" class="dropdown-item">PlayStation</a>
-                <a href="{% url 'products' %}?platform=playstation2" class="dropdown-item">PlayStation2</a>
+                <a href="{% url 'products' %}?category=games&?platform=nes" class="dropdown-item">NES</a>
+                <a href="{% url 'products' %}?category=games&?platform=snes" class="dropdown-item">SNES</a>
+                <a href="{% url 'products' %}?category=games&?platform=playstation" class="dropdown-item">PlayStation</a>
+                <a href="{% url 'products' %}?category=games&?platform=playstation2" class="dropdown-item">PlayStation2</a>
             </div>
         </li>
 
