@@ -100,6 +100,20 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* login, logout, register */
+.login-container {
+    display:flex;
+    flex-direction: column;
+    margin-top: 16rem !important;
+    margin-bottom: 14rem;
+}
+
+.login-text {
+    color: #5bc0de;
+    font-weight: bold;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
