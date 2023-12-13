@@ -77,7 +77,7 @@ form.addEventListener('submit', function(ev) {
                         line2: $.trim(form.street_address2.value),
                         city: $.trim(form.town_or_city.value),
                         country: $.trim(form.country.value),
-                        state: $.trim(form.county.value),
+                    /*    state: $.trim(form.county.value), */
                     }
                 }
             },
@@ -90,7 +90,7 @@ form.addEventListener('submit', function(ev) {
                     city: $.trim(form.town_or_city.value),
                     country: $.trim(form.country.value),
                     postal_code: $.trim(form.postcode.value),
-                    state: $.trim(form.county.value),
+                /*    state: $.trim(form.county.value), */
                 }
             },
         }).then(function(result) {
@@ -108,7 +108,7 @@ form.addEventListener('submit', function(ev) {
                 $('#submit-button').attr('disabled', false);
             } else {
                 if (result.paymentIntent.status === 'succeeded') {
-                    form.submit();
+                    // form.submit();
                 }
             }
         });
