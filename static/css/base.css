@@ -100,6 +100,10 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 /* bootstrap toasts | classes and style taken from CodeInstitute boutique-ado walktrough*/ 
 
 .message-container {
@@ -118,11 +122,12 @@ a.category-badge > span.badge:hover {
 }
 
 /* login, logout, register */
-.login-container {
+.auth-container {
     display:flex;
     flex-direction: column;
-    margin-top: 16rem !important;
+    margin-top: 26rem !important;
     margin-bottom: 14rem;
+    max-width: 500px;
 }
 
 .login-text {

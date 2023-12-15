@@ -7,10 +7,12 @@
 
 {% block content %}
 
-<h1>{% trans "Sign In" %}</h1>
+<hr>
+<h2 class="logo-font mb-4">{% trans "Sign In" %}</h2>
+<hr>
 
 <!--Login page-->
-<div class="container-fluid d-flex justify-content-center align-items-center login-container">
+<div class="container-fluid d-flex justify-content-center align-items-center auth-container">
   <div class="row border rounded-3 bg-white">
       <div class="card-body border rounded-3">
           <div class="mb-1">
@@ -27,8 +29,8 @@
                   {% if redirect_field_value %}
                   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
                   {% endif %}
-                  <a class="btn continue-shop-btn rounded" href="{% url 'home' %}">Home</a>
-                  <button class="btn btn-info btn-login-register font-weight-bold" type="submit">{% trans "Login" %}</button>
+                  <a class="btn btn-outline-black rounded-0" href="{% url 'home' %}">Home</a>
+                  <button class="btn btn-outline-black rounded-0 font-weight-bold" type="submit">{% trans "Login" %}</button>
                   <p class="mt-2">
                       <a class="button secondaryAction small text-decoration-none login-text" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
                   </p>
