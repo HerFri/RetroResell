@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q  # OR logic
 from django.db.models.functions import Lower
+
 from .models import Product, Platform, Category
+from .forms import ProductForm
 
 # Create your views here.
 
@@ -35,6 +37,7 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
         if 'platform' in request.GET:
             platforms = request.GET['platform'].split(',')
             products = products.filter(platform__name__in=platforms)
@@ -60,7 +63,6 @@ def all_products(request):
         'current_sorting': current_sorting,
     }
 
-    
     return render(request, 'products/products.html', context)
 
 def product_detail(request, product_id):
@@ -72,5 +74,14 @@ def product_detail(request, product_id):
         'product': product,
     }
 
-    
     return render(request, 'products/product_detail.html', context)
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
