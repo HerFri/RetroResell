@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
 if os.path.isfile('env.py'):
     import env
 
@@ -31,7 +35,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['7928-2001-9e8-db2a-1500-ed89-a2b4-cdf4-9539.ngrok-free.app',
                  'a9b7-2001-9e8-db18-2000-59e1-ed1b-21d5-c3a0.ngrok-free.app',
                 '127.0.0.1',
-                'localhost',]
+                'localhost',
+                'retroresell.herokuapp.com']
 
 
 # Application definition
@@ -124,12 +129,18 @@ WSGI_APPLICATION = 'retroresell.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
 
 
 # Password validation
