@@ -36,7 +36,7 @@ ALLOWED_HOSTS = ['7928-2001-9e8-db2a-1500-ed89-a2b4-cdf4-9539.ngrok-free.app',
                  'a9b7-2001-9e8-db18-2000-59e1-ed1b-21d5-c3a0.ngrok-free.app',
                 '127.0.0.1',
                 'localhost',
-                'https://retroresell-8fed695ea7e1.herokuapp.com']
+                'retroresell-8fed695ea7e1.herokuapp.com']
 
 
 # Application definition
