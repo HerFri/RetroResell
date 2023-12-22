@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/retro_controllers.jpg') no-repeat center center fixed;
+    background: url(https://res.cloudinary.com/dg39w8c5b/image/upload/v1703265790/retro_controllers_oxaf5o.jpg) no-repeat center center fixed;
     background-size: contain;
     background-repeat: repeat;
     height: calc(100vh - 164px); /* the eventual height of the top header */
