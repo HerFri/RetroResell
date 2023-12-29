@@ -6,6 +6,7 @@ body {
     background: url(https://res.cloudinary.com/dg39w8c5b/image/upload/v1703265790/retro_controllers_oxaf5o.jpg) no-repeat center center fixed;
     background-size: contain;
     background-repeat: repeat;
+/*    background-attachment: scroll, local; */
     height: calc(100vh - 164px); /* the eventual height of the top header */
     color: #555;
     font-family: 'Kdam Thmor Pro';
@@ -214,6 +215,21 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.outline-white {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+
+.outline-black {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.nodeco {
+    text-decoration: none;
+}
+
+
 /*  Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -284,3 +300,9 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
+
+/*@media (max-width: 500px) {
+    .carousel-item {
+        width: 30%;
+    }
+} */
