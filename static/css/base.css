@@ -232,6 +232,31 @@ input[name='q']::placeholder {
 
 /*  Media Queries */
 
+@media (max-width: 767px) {
+    .card-p {
+        font-size: 10px;
+    }
+
+    i {
+        font-size: 10px;
+    }
+}
+
+/* adjust menu icons for small displays */
+@media (max-width: 375px) {
+    .mobile-icon {
+        font-size: 8px;
+    }
+}
+
+/* adjust menu icons for displays > 992 */
+@media (min-width: 992px) {
+    .list-inline-item {
+        font-size: 15px;
+    }
+}
+
+
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
