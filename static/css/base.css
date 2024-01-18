@@ -8,12 +8,29 @@ body {
     background-repeat: repeat;
 /*    background-attachment: scroll, local; */
     height: calc(100vh - 164px); /* the eventual height of the top header */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     color: #555;
     font-family: 'Kdam Thmor Pro';
 }
 
+footer {
+    min-height: 10vh;
+}
+
+
 .card {
     border: 1px solid black;
+}
+
+.bottom-away {
+    position: absolute;
+    top: 21vh;
+}
+
+.img-container {
+    height: 50%;
 }
 
 /* from Bulma */
@@ -232,6 +249,39 @@ input[name='q']::placeholder {
 
 /*  Media Queries */
 
+/*  Wishlist */
+
+/* Push remove-btn down for screens > width 1200px */
+@media (min-width: 1200px) {
+    .push-down {
+      margin-top: 132px;
+    }
+  }
+
+ /* @media (max-width: 1199px) {
+    .push-down {
+      margin-top: 28px;
+    }
+  } */
+
+/* Push remove-btn down for screens min-width: 992px and max-width: 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .push-down {
+      margin-top: 28px;
+    }
+  } 
+
+@media (max-width: 991px) {
+    .price {
+      font-size: 13px;
+    }
+
+    .rem-from-wishlist-btn {
+        font-size: 10px;
+      }
+    }
+ 
+
 @media (max-width: 767px) {
     .card-p {
         font-size: 10px;
@@ -255,6 +305,27 @@ input[name='q']::placeholder {
         font-size: 15px;
     }
 }
+
+/* adjust remove button for small displays */
+@media (max-width: 576px) {
+    .rem-from-wishlist-btn {
+      font-size: 5px;
+      padding: 5px 10px;
+      width: 100px;
+      height: 20px;
+      margin-top: 0px;
+    }
+
+    .img-contain {
+        width: 100%;
+    }
+    
+    body {
+        min-height: 150vh;
+    }
+
+  }
+
 
 
 /* Slightly larger container on xl screens */
@@ -323,6 +394,37 @@ input[name='q']::placeholder {
 
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
+    }
+}
+
+/* fixed footer */
+@media (min-width: 1200px) {
+    .min-hgt {
+        min-height: 56vh;
+    }
+} 
+
+@media (max-width: 1199px) {
+    .min-hgt {
+        min-height: 67vh;
+    }
+} 
+
+@media (max-width: 820px) {
+    .min-hgt {
+        min-height: 67vh;
+    }
+} 
+
+@media (max-width: 768px) {
+    .min-hgt {
+        min-height: 63vh;
+    }
+} 
+
+@media (max-width: 500px) {
+    .min-hgt {
+        min-height: 110vh;
     }
 }
 
