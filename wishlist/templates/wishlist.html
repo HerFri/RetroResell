@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="overlay"></div>
+    <div class="bg-white">
+    <hr>
+        <h2 class="logo-font mb-4 text-center">My Wishlist</h2>
+    <hr>
+    </div>
+    <div class="row"> 
+    
+        {% for wishlist_item in wishlist_items %}
+            <div class="container card mb-2">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3">
+                        <div class="m-2 border border-dark">
+                            {% if wishlist_item.product.image %}
+                            <a href="{% url 'product_detail' wishlist_item.product.id %}">
+                                <img class="img-contain mx-auto img-fluid" src="{{ wishlist_item.product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_detail' wishlist_item.product.id %}">
+                                <img class="img-contain mx-auto img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-9">
+                        <div class="pt-1">
+                            <p class="card-p mb-0">{{ wishlist_item.product.name }} ({{ wishlist_item.product.platform.friendly_name }})</p>
+                        </div>
+                        <div class="bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="card-p price mb-0 text-left font-weight-bold">€{{ wishlist_item.product.price }}</p>
+                                    {% if wishlist_item.product.category %}
+                                        <p class="card-p small mt-0 mb-0">
+                                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ wishlist_item.product.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                    {% endif %}
+                                    {% if wishlist_item.product.rating %}
+                                        <small class="card-p text-muted"><i class="fas fa-star mr-1"></i>{{ wishlist_item.product.rating }} / 5.0</small>
+                                    {% else %}
+                                        <small class="card-p text-muted">No Rating</small>
+                                    {% endif %}
+                                    <div class="push-down ml-10 mb-2">
+                                        {% if user.is_authenticated or request.user.is_superuser %}
+                                            <form class="m-left mt-0" action="{% url 'remove_from_wishlist' wishlist_item.product.id %}" method="post">
+                                        {% csrf_token %}
+                                            <button type="submit" class="rem-from-wishlist-btn">Remove from Wishlist</button>
+                                            </form>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div> 
+</div>
+{% endblock %}
+
+<!-- {% block postloadjs %}
+        {{ block.super }}
+        <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %} -->
