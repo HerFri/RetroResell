@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q  # OR logic
 from django.db.models.functions import Lower
 
-from .models import Product, Platform, Category
-from .forms import ProductForm
+from .models import Product, Platform, Category, Comment
+from .forms import ProductForm, CommentForm
 
 # Create your views here.
 
@@ -67,16 +67,76 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """ A view to show individual product details and 
+    for posting comments"on indivisual products """
 
     product = get_object_or_404(Product, pk=product_id)
+    comments = product.comments.filter(approved=True).order_by('created_on')
 
     context = {
         'product': product,
+        'comment_form': CommentForm(),
+        'comments': comments,
+        'commented': False,
     }
 
+    if request.method == 'POST':
+        print('write_comment view - POST method handler')
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.product = product
+            comment.author = request.user
+            comment.save()
+            context = {
+                'product': product,
+                'commented': True,
+                'comment_form': CommentForm(),
+                'comments': comments,
+            }
+            return render(request, 'products/product_detail.html', context)
+        else:
+            comment_form = CommentForm()    
     return render(request, 'products/product_detail.html', context)
 
+@login_required
+def edit_comment(request, comment_id):
+    """
+    Allows authenticated users to edit a comment
+    """
+    comment = get_object_or_404(Comment, pk=comment_id, author=request.user)
+    if request.method == "POST":
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Comment has been edited!')
+            return redirect('product_detail', product_id=comment.product.pk)
+    else:
+        form = CommentForm(instance=comment)
+
+    return render(request, 'products/edit_comment.html', {'form': form,
+                  'comment': comment})
+
+
+@login_required
+def delete_comment(request, comment_id):
+    """
+    Allows authenticated users to delete a comment
+    """
+    if (request.user.is_superuser):
+        comment = get_object_or_404(Comment, pk=comment_id)
+    else:
+        comment = get_object_or_404(Comment, pk=comment_id,
+                                    author=request.user)
+    if request.user.is_superuser or request.user == comment.author:
+        if request.method == 'POST':
+            comment.delete()
+            messages.success(request, f'Comment deleted successfully!')
+            return redirect('product_detail', product_id=comment.product.pk)
+        return render(request, 'products/delete_comment.html', {'comment': comment})
+    else:
+
+        return redirect('product_detail', product_id=comment.product.pk)
 
 @login_required
 def add_product(request):

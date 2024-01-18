@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container mt-5 h-100">
+    <h2>Edit Comment</h2>
+    <form method="post">
+
+        {{ form | crispy }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-outline-dark btn-lg">Submit</button>
+    </form>
+</div>
+{% endblock content %}

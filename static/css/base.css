@@ -299,10 +299,10 @@ input[name='q']::placeholder {
     }
 }
 
-/* adjust menu icons for displays > 992 */
+/* adjust menu icons for displays > 992px */
 @media (min-width: 992px) {
     .list-inline-item {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
