@@ -15,7 +15,7 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container h-100">
         <div class="row">
             <div class="col">
                 <hr>
@@ -44,7 +44,7 @@
                                 <th>Order Total</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <body>
                             {% for order in orders %}
                                 <tr>
                                     <td>
@@ -66,11 +66,12 @@
                                     <td>€{{ order.grand_total }}</td>
                                 </tr>
                             {% endfor %}
-                        </tbody>
+                        </body>
                     </table>
                 </div>
             </div>
         </div>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
