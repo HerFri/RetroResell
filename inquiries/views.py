@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -7,7 +7,7 @@ from .forms import InquiryForm
 
 
 @login_required
-def submit_inquiry(request):
+def user_inquiry(request):
     """ 
     A view for users to submit Trade In Inquiries 
     or other inquiries and view them 
@@ -32,4 +32,36 @@ def submit_inquiry(request):
         'inquiry_form': inquiry_form,
     }
     return render(request, context)
+
+@login_required
+def view_inquiry(request, inquiry_id):
+    """
+    A view to view an inquiry's details
+    """
+
+    inquiry = get_object_or_404(Inquiry, pk=inquiry_id)
+
+    return render(request, 'inquiries/view_inquiry.html', {'inquiry': inquiry})    
+
+
+@login_required
+def delete_inquiry(request, inquiry_id):
+    """
+    A view to delete an inquiry
+    """
+    inquiry = get_object_or_404(Inquiry, pk=inquiry_id)
+
+    if request.method == 'POST':
+        inquiry.delete()
+        messages.success(
+            request, 'Your inquiry has been deleted successfully.'
+        )
+        return redirect('inquiries')
+    
+    context = {
+        'inquiry': inquiry
+    }
+
+    return render(request, 'inquiries/delete_inquiry.html', context)
+
 
