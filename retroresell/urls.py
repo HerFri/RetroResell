@@ -29,6 +29,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('', include('wishlist.urls')),
+    path('inquiries/', include('inquiries.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'retroresell.views.handler404'

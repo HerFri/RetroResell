@@ -28,10 +28,10 @@ class InquiryForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """ Add placeholders to fields """
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'name': 'Your Name',
-            'email': 'Your Email Address',
-            'phone_number': 'Your Phone Number',
-            'subject': 'Subject',
-            'user_message': 'Your Message',
-        }
+        #placeholders = {
+        #    'name': 'Your Name',
+        #    'email': 'Your Email Address',
+        #    'phone_number': 'Your Phone Number',
+        #    'subject': 'Subject',
+        #    'user_message': 'Your Message',
+        #}

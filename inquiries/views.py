@@ -6,6 +6,7 @@ from .models import Inquiry
 from .forms import InquiryForm
 
 
+
 @login_required
 def user_inquiry(request):
     """ 
@@ -16,14 +17,14 @@ def user_inquiry(request):
     inquiries = inquiries.order_by('-created_on')
 
     if request.method == 'POST':
-        form = InquiryForm(request.POST, request.FILES)
-        if form.is_valid():
-            inquiry = form.save(commit=False)
+        inquiry_form = InquiryForm(request.POST, request.FILES)
+        if inquiry_form.is_valid():
+            inquiry = inquiry_form.save(commit=False)
             inquiry.user = request.user
             inquiry.save()
             message_text = 'Your inquiry has been submitted successfully and will be reviewed shortly.'
             messages.success(request, message_text)
-            return redirect(request.path)    
+            return redirect('inquiries')    
     else:
         inquiry_form = InquiryForm()
 
