@@ -6,17 +6,21 @@ class InquiryForm(forms.ModelForm):
     class Meta:
         model = Inquiry
         fields = [ 'name', 'email', 'phone_number', 'subject', 
-                  'order_number', 'user_message'
+                  'order_number', 'image', 'user_message'
                 ]
-
+    
+    phone_number = forms.CharField(
+        label='Phone Number',
+        required=False
+    )
 
     order_number = forms.CharField(
         label='Order Number',
         required=False
     )
-    
-    phone_number = forms.CharField(
-        label='Phone Number',
+
+    image = forms.ImageField(
+        label='Image',
         required=False
     )
     
@@ -31,14 +35,3 @@ class InquiryForm(forms.ModelForm):
             'subject': 'Subject',
             'user_message': 'Your Message',
         }
-
-
-class UserReplyForm(forms.ModelForm):
-    class Meta:
-        model = Inquiry
-        fields = ['user_reply']
-
-    user_reply = forms.CharField(
-        label='Reply',
-        required=True,
-    )

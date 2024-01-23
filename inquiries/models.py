@@ -17,8 +17,7 @@ class Inquiry(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     image = models.ImageField(null=True, blank=True)
     admin_reply = models.TextField(null=True, blank=True)
-    user_reply = models.TextField(null=True, blank=True)
-
+    
     class Meta:
         ordering = ['created_on']
         verbose_name_plural = 'inquiries'
