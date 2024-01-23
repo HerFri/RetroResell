@@ -17,20 +17,20 @@ def user_inquiry(request):
     inquiries = inquiries.order_by('-created_on')
 
     if request.method == 'POST':
-        inquiry_form = InquiryForm(request.POST, request.FILES)
-        if inquiry_form.is_valid():
-            inquiry = inquiry_form.save(commit=False)
+        form = InquiryForm(request.POST, request.FILES)
+        if form.is_valid():
+            inquiry = form.save(commit=False)
             inquiry.user = request.user
             inquiry.save()
             message_text = 'Your inquiry has been submitted successfully and will be reviewed shortly.'
             messages.success(request, message_text)
             return redirect('inquiries')    
     else:
-        inquiry_form = InquiryForm()
+        form = InquiryForm()
 
     context = {
         'inquiries': inquiries,
-        'inquiry_form': inquiry_form,
+        'form': form,
     }
     return render(request, 'inquiries/inquiries.html', context)
 

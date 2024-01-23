@@ -81,7 +81,6 @@ def product_detail(request, product_id):
     }
 
     if request.method == 'POST':
-        print('write_comment view - POST method handler')
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)

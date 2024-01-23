@@ -15,7 +15,7 @@ class Inquiry(models.Model):
     user_message = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=True, upload_to='inquiry_images/')
     admin_reply = models.TextField(null=True, blank=True)
 
     class Meta:
