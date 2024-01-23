@@ -23,7 +23,7 @@ def user_inquiry(request):
             inquiry.save()
             message_text = 'Your inquiry has been submitted successfully and will be reviewed shortly.'
             messages.success(request, message_text)
-            return redirect()    
+            return redirect(request.path)    
     else:
         inquiry_form = InquiryForm()
 
@@ -31,7 +31,7 @@ def user_inquiry(request):
         'inquiries': inquiries,
         'inquiry_form': inquiry_form,
     }
-    return render(request, context)
+    return render(request, 'inquiries/inquiries.html', context)
 
 @login_required
 def view_inquiry(request, inquiry_id):
