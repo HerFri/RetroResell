@@ -246,6 +246,20 @@ input[name='q']::placeholder {
     text-decoration: none;
 }
 
+.inline-block {
+    display: inline-block;
+  }
+
+
+.inquiry-message {
+    padding: 5px;
+}  
+
+/* Inquiries */
+
+.back-btn {
+    margin-top: 180vh;
+}
 
 /*  Media Queries */
 
@@ -292,6 +306,41 @@ input[name='q']::placeholder {
     }
 }
 
+/* Inquiries */
+
+/* Push Confirm Deletion Card Down for screens with width => 992px & height max 800px */
+
+@media (min-width: 992px) and (max-height: 800px) {
+    .delete-confirm {
+      margin-top: 30vh;
+    }
+
+/* Distance Delete Inquiry Button away from footer */
+    .delete-inquiry-btn {
+        margin-top: -37px;
+    }
+
+/* Make extra space on top of "Back to My Inquiries" button */
+    .mrgn-top {
+        margin-top: 40px;
+    }
+  } 
+
+
+/* adjust paragraphs for small displays */
+
+@media (max-width: 375px) {
+    .table-heading,
+    .table-data {
+        font-size: 10px;
+    }
+}
+
+/* adjust back-button for small displays with max-widht=500px */
+.back-btn {
+    margin-top: 1vh;
+}
+
 /* adjust menu icons for small displays */
 @media (max-width: 375px) {
     .mobile-icon {
@@ -325,8 +374,6 @@ input[name='q']::placeholder {
     }
 
   }
-
-
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {

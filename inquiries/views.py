@@ -10,7 +10,7 @@ from .forms import InquiryForm
 @login_required
 def user_inquiry(request):
     """ 
-    A view for users to submit Trade In Inquiries 
+    A view for users to submit Sale Inquiries 
     or other inquiries and view them 
     """
     inquiries = Inquiry.objects.filter(user=request.user)
@@ -63,6 +63,6 @@ def delete_inquiry(request, inquiry_id):
         'inquiry': inquiry
     }
 
-    return render(request, 'inquiries/delete_inquiry.html', context)
+    return render(request, 'inquiries/delete_inquiry_confirm.html', context)
 
 

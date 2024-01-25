@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container mrgn-top h-100">
+    <div class="row">
+        <div class="col-12 text-left mt-4">
+            <a href="{% url 'inquiries' %}" class="btn btn-outline-dark btn-sm" aria-label="Navigate to My Inquiries page">
+                <span>
+                    <i class="fas fa-angle-left"></i>
+                </span>
+                <span class="text-uppercase">Back to My Inquiries</span>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <hr>
+            <h2 class="mb-4 mx-2">Inquiry Details for Inquiry Number {{ inquiry.id }}</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <div>
+                <div>
+                    <p class="mb-1 text-black font-weight-bold inline-block">Name:</p>
+                    <p class="inline-block">{{ inquiry.name }}</p>
+                </div>
+                <div>
+                    <p class="mb-1 text-black font-weight-bold inline-block">Email:</p>
+                    <p class="inline-block">{{ inquiry.email }}</p>
+                </div>
+                {% if inquiry.phone_number %}
+                <div>
+                    <p class="mb-1 text-black font-weight-bold inline-block">Phone Number:</p>
+                    <p class="inline-block">{{ inquiry.phone_number }}</p>
+                </div>
+                {% endif %}
+                <hr>
+                <div>
+                    <p class="mb-1 text-black font-weight-bold inline-block">Subject:</p>
+                    <p class="inline-block">{{ inquiry.subject }}</p>
+                </div>
+                {% if inquiry.order_number %}
+                <div>
+                    <p class="mb-1 text-black font-weight-bold inline-block">Order Number:</p>
+                    <p class="inline-block">{{ inquiry.order_number }}</p>
+                </div>
+                {% endif %}
+                {% if inquiry.image %}
+                <div>
+                    <p class="mb-3 text-black font-weight-bold inline-block">Your uploaded Image:</p>
+                    <br>
+                    <a href="{{ inquiry.image.url }}" target="_blank">
+                        <img class="mb-3" src="{{ inquiry.image.url }}" class="img-fluid" alt="Inquiry Image" width="300">
+                    </a>
+                </div>
+                {% endif %}
+                <div>
+                    <p class="mb-1 text-black font-weight-bold">Your Inquiry Message:</p>
+                    <div class="border inquiry-message">
+                        <p>{{ inquiry.user_message }}</p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    {% if inquiry.admin_reply %}
+                    <p class="mb-1 text-black font-weight-bold inline-block">Inquiry Status:</p>
+                    <p class="inline-block">Admin responded.</p>
+                    <br>
+                    <p class="mb-1 text-black font-weight-bold">Admin Message{{ admin_reply.created_on }}:</p>
+                    <div class="border inquiry-message">
+                        <p>{{ inquiry.admin_reply }}</p>
+                    </div>
+                    {% else %}
+                    <p class="mb-1 text-black font-weight-bold inline-block">Inquiry Status:</p>
+                    <p class="inline-block">Your inquiry is currently reviewed. Approximate response time is 3-5 days.</p>
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-6 float-left delete-inquiry-btn">
+                        <form class="mt-5" action="{% url 'delete_inquiry' inquiry.id %}" method="POST">
+                            {% csrf_token %}
+                            {{ user_reply_form | crispy }}
+                            <a class="text-decoration-none text-uppercase float-left" href="{% url 'delete_inquiry' inquiry.id %}" aria-label="Delete Request">
+                                <div class="btn btn-outline-dark"> 
+                                    <i class="fa-solid fa-trash-can fa-lg mr-2"></i>
+                                    Delete Inquiry
+                                </div>
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</div>
+{% endblock %}
