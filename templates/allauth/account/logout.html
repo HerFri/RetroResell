@@ -7,7 +7,7 @@
 {% block content %}
 
 <!--Logout page-->
-<div class="container-fluid d-flex justify-content-center align-items-center auth-container">
+<div class="container-fluid h-100 d-flex justify-content-center align-items-center auth-container">
   <div class="row border rounded-3">
       <div class="card-body bg-white">
           <div class="mb-1">
@@ -21,7 +21,7 @@
                   {% if redirect_field_value %}
                   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
                   {% endif %} 
-                  <button class="btn btn-info btn-login-register font-weight-bold" type="submit">{% trans 'Log Out' %}</button>
+                  <button class="btn btn-outline-dark font-weight-bold" type="submit">{% trans 'Log Out' %}</button>
               </form>
           </div>
       </div>
