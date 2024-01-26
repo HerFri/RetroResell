@@ -28,3 +28,22 @@ class InquiryForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """ Add placeholders to fields """
         super().__init__(*args, **kwargs)
+        placeholders = {
+            'name': 'Name',
+            'email': 'Email Address',
+            'phone_number': 'Phone Number',
+            'subject': 'Subject',
+            'order_number': 'Order Number',
+            'image': 'Image',
+            'user_message': 'User Message',
+        }
+        
+        self.fields['name'].widget.attrs['autofocus'] = True
+        for field in self.fields:
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            else:
+                placeholder = placeholders[field]
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].label = False
+        
