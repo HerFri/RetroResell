@@ -26,7 +26,10 @@ class InquiryForm(forms.ModelForm):
     
 
     def __init__(self, *args, **kwargs):
-        """ Add placeholders to fields """
+        """ 
+        Add placeholders, remove auto-generated
+        labels and set autofocus on first field 
+        """
         super().__init__(*args, **kwargs)
         placeholders = {
             'name': 'Name',

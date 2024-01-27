@@ -145,27 +145,91 @@
     {% block content %}
     {% endblock %}
     <footer class="footer mt-5 py-3 bg-black">
-        <p class="m-0 text-center text-white">Follow us on:
-            <a href="https://www.facebook.com/">
-                <i class="fab fa-facebook-square ms-3 outline text-white"></i>
-            </a>
-            <a href="https://twitter.com/">
-                <i class="fab fa-twitter-square ms-3 outline text-white"></i>
-            </a>
-            <a href="https://www.instagram.com/">
-                <i class="fab fa-instagram-square ms-3 text-white"></i>
-            </a>
-            <a href="https://www.youtube.com/">
-                <i class="fab fa-youtube-square ms-3 text-white">
-                </i>
-            </a>
-        </p>
+        <div class="container">
+            <div>
+                <h4 class="m-0 text-center text-white">Follow us on:
+                    <a href="https://www.facebook.com/">
+                        <i class="smicon fab fa-facebook-square mx-2 fa-lg text-white"></i>
+                    </a>
+                    <a href="https://twitter.com/">
+                        <i class="smicon fab fa-twitter-square mx-2 fa-lg text-white"></i>
+                    </a>
+                    <a href="https://www.instagram.com/">
+                        <i class="smicon fab fa-instagram-square mx-2 fa-lg text-white"></i>
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <i class="smicon fab fa-youtube-square mx-2 fa-lg text-white">
+                        </i>
+                    </a>
+                </h4>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-8 text-left mt-4">
+                        <h4 class="text-white">Feel free to contact us:</h4>
+                        <p class="text-white">Address: Sesamstraße 1, 12345 Gamingstadt, Germany</p>
+                        <p class="text-white">Phone: +49 123 456 78910</p>
+                        <p class="text-white">Email: contact@retroresell.com</p>
+                        <h4>
+                            <a href="https://www.termsfeed.com/live/3b45d964-87e5-4571-83d8-2438254024b6" target="_blank" rel="noopener" role="button"
+                            aria-label="View our Privacy Policy(page will be opened in a separate tab)" class="text-decoration-none text-white">Our Privacy Policy</a>
+                        </h4>
+                        <p class="text-white">&copy; 2024 RetroResell. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex mt-sm-4">
+                        <div id="mc_embed_shell">
+                            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                            <div id="mc_embed_signup">
+                                <form action="https://herokuapp.us12.list-manage.com/subscribe/post?u=8b870646907fed3c940561eba&amp;id=d43b721fd1&amp;f_id=00a249e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                    <div id="mc_embed_signup_scroll"><h2 class="text-black">Subscribe to the RetroResell Newsletter to not miss on on our new product arrivals!</h2>
+                                        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                                        <div class="mc-field-group"><label for="mce-EMAIL">E-Mail-Adresse <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div>
+                                    <div id="mce-responses" class="clear foot">
+                                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                                    </div>
+                                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                    /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                                    <input type="text" name="b_8b870646907fed3c940561eba_d43b721fd1" tabindex="-1" value="">
+                                </div>
+                                    <div class="optionalParent">
+                                        <div class="clear foot">
+                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+        (function($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0]='EMAIL';
+            ftypes[0]='email';
+            fnames[1]='FNAME';
+            ftypes[1]='text';
+            fnames[2]='LNAME';
+            ftypes[2]='text';
+            fnames[3]='ADDRESS';
+            ftypes[3]='address';
+            fnames[4]='PHONE';
+            ftypes[4]='phone';
+            fnames[5]='BIRTHDAY';
+            ftypes[5]='birthday';
+            }(jQuery));
+            var $mcj = jQuery.noConflict(true);
+    </script>
     {% endblock %}
-    
   </body>
 </html>

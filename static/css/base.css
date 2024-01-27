@@ -15,10 +15,9 @@ body {
     font-family: 'Kdam Thmor Pro';
 }
 
-footer {
-    min-height: 10vh;
-}
-
+/* .footer {
+    height: 100%;
+} */
 
 .card {
     border: 1px solid black;
@@ -255,15 +254,51 @@ input[name='q']::placeholder {
     padding: 5px;
 }  
 
+
 /* Inquiries */
 
 .back-btn {
     margin-top: 180vh;
 }
 
+/* Mail Chimp */
+
+#mc_embed_signup{
+    background:#fff;
+    clear:left; 
+    width: 450px;
+    padding: 5px;
+}
+
 /*  Media Queries */
 
+/* Mail Chimp */
+
+/* Reduce size of newsletter form for smaller displays */
+
+@media (max-width: 300px) {
+    #mc_embed_signup{
+        width: 180px;
+    }
+  } 
+
+
+@media (max-width: 500px) {
+    #mc_embed_signup{
+        width: 250px;
+    }
+  } 
+
+/* Reduce size of newsletter form for medium displays */
+
+@media (max-width: 1024px) {
+    #mc_embed_signup{
+        width: 300px;
+    }
+  } 
+
 /*  Wishlist */
+
 
 /* Push remove-btn down for screens > width 1200px */
 @media (min-width: 1200px) {
