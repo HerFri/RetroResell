@@ -19,9 +19,6 @@ body {
     height: 100%;
 } */
 
-.card {
-    border: 1px solid black;
-}
 
 .bottom-away {
     position: absolute;
@@ -254,6 +251,43 @@ input[name='q']::placeholder {
     padding: 5px;
 }  
 
+.carousel-border {
+    border: 5px solid #ffffff;
+}
+
+
+/* I asked ChatGPT for a sliding text effect with this question: 
+'Can I have code for sliding text from right to left in CSS?' And I got this answer: */
+
+.sliding-text {
+    position: relative;
+    animation: slide 25s linear infinite;
+    width: max-content;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    90% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(-100%);
+      animation-delay: 3s;
+    }
+  }
+  
+#slide-container {
+    border: 3px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+
+.z.index {
+    z-index: -1;
+}
 
 /* Inquiries */
 
@@ -271,6 +305,22 @@ input[name='q']::placeholder {
 }
 
 /*  Media Queries */
+
+/* Sliding text index.html */
+
+@media (max-width: 500px) {
+    .sliding-text{
+        font-size: 20px;
+    }
+  } 
+
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    #scroll-container{
+        margin-top: 20px;
+    }
+} 
+
 
 /* Mail Chimp */
 

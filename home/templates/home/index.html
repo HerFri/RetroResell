@@ -2,22 +2,26 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-            <h1 class="display-4 logo-font text-black mt-5 text-center h1 outline-white">
-                Welcome to RetroResell!<br>
-                Your source for Retro Videogaming!
-            </h1>
+    <div class="header-container">
+    <!--    <h1 class="logo-font text-black mt-3 text-center sliding-text">
+                Welcome to RetroResell! Your source for Retro Videogaming!
+            </h1> -->
     </div>
 {% endblock %}
 
 {% block content %}
 <div class="container h-100">
+    <div id="slide-container" class="bg-white">
+        <h1 class="logo-font text-black mt-3 text-center sliding-text">
+            Welcome to RetroResell! Your source for Retro Videogaming!
+        </h1>
+      </div>
     <div class="row h-100">
         <div class="col">
         </div>
-            <div class="col">
+            <div class="col-sm-8 col-md-6 justify-content-center">
                 <!-- Code for carousel from https://getbootstrap.com/docs/4.2/components/carousel/-->
-                <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide mt-5 carousel-border" data-ride="carousel">
                     <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -58,7 +62,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col">
+                <div class="d-flex justify-content-center">
                     <div class="my-5">
                         <h4>
                             <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
