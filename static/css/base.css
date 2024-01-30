@@ -587,7 +587,7 @@ input[name='q']::placeholder {
 
 @media (min-width: 400px) and (min-height: 900px)  {
     .push-footer {
-        min-height: 63vh;
+        min-height: 100vh;
     }
 }
 
@@ -606,6 +606,12 @@ input[name='q']::placeholder {
 @media (min-width: 1024px) and (min-height: 1366px)  {
     .push-footer {
         min-height: 55vh;
+    }
+}
+
+@media (min-width: 1400px)  {
+    .push-footer {
+        min-height: 350vh;
     }
 }
 

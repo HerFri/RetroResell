@@ -24,13 +24,17 @@ class AddToWishlist(LoginRequiredMixin, View):
         user = request.user
         product = get_object_or_404(Product, id=product_id)
         wishlist_item = Wishlist.objects.filter(user=user, product=product)
+        wishlist_item_count = wishlist_item.count()
 
         if wishlist_item.exists():
             messages.info(request, "This item is already in your wishlist!")
         else:
-            wishlist_item = Wishlist.objects.create(user=user, product=product)
-            messages.success(request, "This item was added to your wishlist!")
-            
+            if wishlist_item_count == 5:
+                messages.info(request, "You have reached the maximum number of items in your wishlist!")
+            else:
+                wishlist_item = Wishlist.objects.create(user=user, product=product)
+                messages.success(request, "This item was added to your wishlist!")
+        print(wishlist_item_count)
         return redirect(reverse('product_detail', kwargs={'product_id': product_id}))
 
 class RemovefromWishlist(LoginRequiredMixin, View):
