@@ -302,6 +302,15 @@ input[name='q']::placeholder {
 
 /*  Media Queries */
 
+/* Order Details */
+
+@media (max-width: 500px) {
+    .order-p {
+        font-size: 11px;
+    }
+  }
+
+
 /* Reduce size of dropdown menu item fontsize for smaller displays */
 @media (max-width: 500px) {
     .dropdown-item {
@@ -316,7 +325,7 @@ input[name='q']::placeholder {
         font-size: 26px;
     }
   }
-
+  
 
 /* Sliding text index.html */
 
@@ -550,7 +559,7 @@ input[name='q']::placeholder {
 /* push footer down for different device sizes*/
 @media (min-width: 2000px) {
     .min-hgt {
-        min-height: 100vh;
+        min-height: 150vh;
     }
 } 
 
@@ -585,9 +594,15 @@ input[name='q']::placeholder {
     }
 }
 
+@media (max-width: 300px) {
+    .min-hgt {
+        min-height: 180vh;
+    }
+}
+
 @media (min-width: 400px) and (min-height: 900px)  {
     .push-footer {
-        min-height: 100vh;
+        min-height: 250vh;
     }
 }
 
@@ -611,7 +626,7 @@ input[name='q']::placeholder {
 
 @media (min-width: 1400px)  {
     .push-footer {
-        min-height: 350vh;
+        min-height: 170vh;
     }
 }
 
