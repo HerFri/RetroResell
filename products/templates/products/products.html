@@ -94,8 +94,7 @@
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
+                            <div class="col-12 d-sm-none">
                             </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:2 %}
@@ -115,8 +114,7 @@
                         {% endif %}
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-block d-sm-none d-md-none d-lg-none mb-5">
-                                <hr>
-                            </div>
+                            </div> 
                         {% endif %}
                     {% endfor %}
                 </div>

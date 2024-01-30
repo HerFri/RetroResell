@@ -29,7 +29,7 @@ class AddToWishlist(LoginRequiredMixin, View):
             messages.info(request, "This item is already in your wishlist!")
         else:
             wishlist_item = Wishlist.objects.create(user=user, product=product)
-            messages.info(request, "This item was added to your wishlist!")
+            messages.success(request, "This item was added to your wishlist!")
             
         return redirect(reverse('product_detail', kwargs={'product_id': product_id}))
 
