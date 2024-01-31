@@ -41,10 +41,13 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 order-md-first">
+                    <div class="col-12 col-md-6 order-md-first product-count">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                                <span class="small">
+                                    <a href="{% url 'products' %}" class="text-decoration-none btn btn-outline-dark btn-sm">
+                                        <i class="fas fa-angle-left"></i> Back to all Products</a> | 
+                                </span>
                             {% endif %}
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
@@ -63,8 +66,8 @@
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }} ({{ product.platform.friendly_name }})</p>
+                                <div class="card-body product-name pb-0">
+                                    <p class="mb-0 product-title">{{ product.name }} ({{ product.platform.friendly_name }})</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">

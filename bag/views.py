@@ -21,7 +21,7 @@ def add_to_bag(request, item_id):
         messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag[item_id] = quantity
-        messages.success(request, f'{product.name} has been added to your bag')
+        messages.success(request, f'{product.name} has been added to your cart')
 
     request.session['bag'] = bag
 
@@ -40,7 +40,7 @@ def adjust_bag(request, item_id):
         messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
     else:
         bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        messages.success(request, f'Removed {product.name} from your cart')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
@@ -54,7 +54,7 @@ def remove_from_bag(request, item_id):
         bag = request.session.get('bag', {})
         
         bag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your bag')
+        messages.success(request, f'Removed {product.name} from your cart')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)

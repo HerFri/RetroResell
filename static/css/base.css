@@ -329,28 +329,51 @@ input[name='q']::placeholder {
 
 /*  Media Queries */
 
+/* Products */
+
+@media (max-width: 300px) {
+    .product-name,
+    .comment-body {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 300px) {
+    .product-count {
+        max-width: 80%;
+    }
+}
+
 /* login, logout, register */
 
 @media (max-width: 500px) {
     .top-margin {
         margin-top: 20px;
     }
-  }
+}
 
 @media (max-width: 500px) {
     .auth-container {
         margin-top: 10rem !important;
     }
-  }
+}
 
 @media (max-width: 300px) {
     .card-body {
         width: 100vw;
-}
+    }
 
     #id_email {
-        max-width: 90%;
-}
+        max-width: 90%;   
+    }
+
+    .auth-container {
+        margin-top: 2rem !important;     
+    }
+
+    .top-margin {
+        margin-top: 10rem !important;
+    }
 }
 
 /* Order Details */

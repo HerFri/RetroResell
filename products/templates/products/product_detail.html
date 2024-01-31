@@ -92,9 +92,9 @@
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
+                                    <span class="text-uppercase small">See More Products</span>
                                 </a>
-                                <input type="submit" class="btn btn-outline-dark btn-lg mt-2" value="Add to Bag">
+                                <input type="submit" class="btn btn-outline-dark btn-lg mt-2" value="Add to Cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
@@ -115,7 +115,7 @@
                         {% endwith %}
                 </div>
                 
-                <div class="card-body">
+                <div class="card-body comment-body">
                     {% for comment in comments %}
                     <div class="border border-dark border-1 rounded" style="padding: 10px;">
                         <p>
@@ -143,7 +143,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-4 mt-3">
-                <div class="card-body">
+                <div class="card-body comment-body">
                     {% if commented %}
                     <div class="alert alert-success" role="alert">
                         Your comment is awaiting approval
