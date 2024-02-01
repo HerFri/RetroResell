@@ -1,39 +1,69 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# RetroResell
 
-Welcome,
+## Marketing Strategies
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+* For this project several Marketing strategies were used which are SEO, Content Marketing, Social Media Marketing and Email Marketing.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+### SEO 
 
-## Codeanywhere Reminders
+#### Keywords
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+For the search of suitable keywords for my website I initially used wordtracker.com. Since the free trial only allowed two searches, I used Google search results as primary way of finding suitable keywords. To check the popularity of certain Short-tail and Long-tail keywords, I also checked the 'Related Searches' and 'People also ask' sections on Google. In my search for keywords I aimed at coming up with keywords that have high volume aswell as low competition. I came up with this list of relevant keywords that are most suitable for improving the site's ranking in search engine results, ranking the keywords by the number of search results:
 
-`python3 -m http.server`
+**Short-tail keywords:**
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- Video Games
+- Nintendo
+- Playstation
+- Super Nintendo
+- Buy Gameboy
+- Retro Games
+- Nintendo 64
+- Playstation Portable
+- Retro Console
+- Super Gameboy
+- Gameboy Color
+- Retrogaming Shop
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+**Long-tail keywords:**
+- Buy old Video Games
+- Buy Video Games Online
+- Used Video Games
+- Vintage Video Games
+- Second Hand Video Games 
+- Super Mario Games
+- Retro Video Games
+- Buy Super Nintendo
+- Retro Video Game Consoles
+- Onlineshop for Video Games
 
-`http_server`
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Robotstxt and Sitemaps
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Social Media Marketing
 
-To log into the Heroku toolbelt CLI:
+* For a social media marketing approach, a Facebook MockUp Business Page has been created, that represents the business and its contents. Different current offers of the website are presented as posts that draw the attention of the subscribers to different kind of products that are on sale. The profile picture is the website's logo and the banner shows some of the website's products as well as the slogan.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<details>
+  <summary>Facebook Mockup Page</summary>
+<img src=""><br>
+</details>
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Besides the Facebook Mock Up Page, there are Social Media clickable icons in the footer of the website, which by click open up a new tab to the respective social media site landing page. At this momement, there are no real social media pages provided to those links that represent the company, but these could be added in the future.
 
----
+## Credits
 
-Happy coding!
+# Images
+
+The product images of the website are made my me.
+All other image sources are listed here:
+
+- [Tick Duck](https://www.duckipedia.de/Datei:Phooey_Duck.png)
+- [Daniel Düsentrieb](https://www.facebook.com/photo/?fbid=196773716033388&set=a.196773686033391&locale=it_IT)
+- [Donald Duck](https://static.dw.com/image/1205022_804.jpg)
+
+# Code
+
+## Acknowledgements
+I want to thank the Slack community and the tutors of Code Institute for their very helpful support and valuable criticism!
