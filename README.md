@@ -47,7 +47,7 @@ For the search of suitable keywords for my website I initially used wordtracker.
 
 <details>
   <summary>Facebook Mockup Page</summary>
-<img src=""><br>
+<img src="https://github.com/HerFri/RetroResell/blob/main/docs/readme-files/facebook_mock_up.png?raw=true"><br>
 </details>
 
 Besides the Facebook Mock Up Page, there are Social Media clickable icons in the footer of the website, which by click open up a new tab to the respective social media site landing page. At this momement, there are no real social media pages provided to those links that represent the company, but these could be added in the future.
