@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /inquiries/
+Disallow: /profile/
+Sitemap: https://retroresell-8fed695ea7e1.herokuapp.com/sitemap.xml
