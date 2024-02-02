@@ -12,7 +12,7 @@ Moreover, authenticated users can post a trade offer as an inquiry for selling t
 
 Visit the deployed site [here](https://retroresell-8fed695ea7e1.herokuapp.com/).
 
-![Am I responsive MockUp]()
+![Am I responsive MockUp](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/am_i_responsive_mock_up.PNG?raw=true)
 
 # Agile Approach
 This project was designed and built using the agile approach, beginning from the initial planning until final deployment. For visualizing the different project elements I created a GitHub project and used the provided [Kanban board](https://github.com/users/HerFri/projects/13) to monitor my work progress. The project elements are assigned to different User Stories that can be opened to view the Acceptance Criteria and Tasks to be fulfilled. Moreover, every User Story has been tagged with a label to signify the priority and cruciality of the respective features to the overall workings and functionality of the website.
@@ -20,13 +20,6 @@ This project was designed and built using the agile approach, beginning from the
 To view all User Stories including their required Acceptance Criterias and Tasks, please refer to the Kanban board linked above.
 
 # User Experience
-## Epics:
-* Navigation
-* Ordering & Checkout
-* Product Management
-* Product Categorization & Browsing
-* User Feedback
-
 
 ## Target Audience
 The target audience are gamers of all ages that enjoy older videogames, videogame collectors and people who are interested in starting to play videogames.
@@ -38,8 +31,15 @@ The goal of the site owner is to provide potential customers a big variety of di
 Users and shoppers of the website want to explore and find different retro videogames and consoles that they also might never heard about, read comments about them, discuss them and eventually buy the wanted equipment to play and enjoy them.
 
 ## User-Stories
-Epics: Ordering and Checkout
 
+### Epics:
+* Navigation
+* Ordering & Checkout
+* Product Management
+* Product Categorization & Browsing
+* User Feedback
+* User Interactivity
+* User Registration, Login and Profile
 
 ## Business Model
 The business model is B2C (Business to Customer) which means that the business sells to private customers only. 
