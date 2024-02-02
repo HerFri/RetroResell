@@ -1,13 +1,55 @@
 # RetroResell
+[RetroResell]()
+
+Welcome to RetroResell!
+Your Source for Retro Videogaming!
+
+RetroResell is a B2C e-commerce online shop for retro videogames, consoles and equipment.  
+
+The website comprises different categories of products, such as vidoegames, consoles and miscellaneous/equipment, for different platforms like Super Nintendo, Nintendo 64, GameBoy etc. .
+
+Moreover, authenticated users can post a trade offer as an inquiry for selling their vidoegames, consoles and other belongings that are linked to retro videogaming.
+
+Visit the deployed site [here](https://retroresell-8fed695ea7e1.herokuapp.com/).
+
+![Am I responsive MockUp]()
+
+# Agile Approach
+This project was designed and built using the agile approach, beginning from the initial planning until final deployment. For visualizing the different project elements I created a GitHub project and used the provided [Kanban board](https://github.com/users/HerFri/projects/13) to monitor my work progress. The project elements are assigned to different User Stories that can be opened to view the Acceptance Criteria and Tasks to be fulfilled. Moreover, every User Story has been tagged with a label to signify the priority and cruciality of the respective features to the overall workings and functionality of the website.
+
+To view all User Stories including their required Acceptance Criterias and Tasks, please refer to the Kanban board linked above.
+
+# User Experience
+## Epics:
+* Navigation
+* Ordering & Checkout
+* Product Management
+* Product Categorization & Browsing
+* User Feedback
+
+
+## Target Audience
+The target audience are gamers of all ages that enjoy older videogames, videogame collectors and people who are interested in starting to play videogames.
+
+## Site owner's goal
+The goal of the site owner is to provide potential customers a big variety of different retro videogames and videogame consoles and to bring people closer to retro videogaming that just started to learn about it. People of all ages are encouraged to browse the catalogue of products, comment on certain videogames and consoles and to ask questions about them via an inquiry.
+
+## User and Shopper goals
+Users and shoppers of the website want to explore and find different retro videogames and consoles that they also might never heard about, read comments about them, discuss them and eventually buy the wanted equipment to play and enjoy them.
+
+## User-Stories
+Epics: Ordering and Checkout
+
+
+## Business Model
+The business model is B2C (Business to Customer) which means that the business sells to private customers only. 
 
 ## Marketing Strategies
+For this project several Marketing strategies were used which are SEO, Content Marketing, Social Media Marketing and Email Marketing.
 
-* For this project several Marketing strategies were used which are SEO, Content Marketing, Social Media Marketing and Email Marketing.
-
-### SEO 
+## SEO 
 
 #### Keywords
-
 For the search of suitable keywords for my website I initially used wordtracker.com. Since the free trial only allowed two searches, I used Google search results as primary way of finding suitable keywords. To check the popularity of certain Short-tail and Long-tail keywords, I also checked the 'Related Searches' and 'People also ask' sections on Google. In my search for keywords I aimed at coming up with keywords that have high volume aswell as low competition. I came up with this list of relevant keywords that are most suitable for improving the site's ranking in search engine results, ranking the keywords by the number of search results:
 
 **Short-tail keywords:**
@@ -69,7 +111,7 @@ To further enhance the website's SEO ranking, a robots.txt and a sitemap.xml fil
 The product images of the website are made my me.
 All other image sources are listed here:
 
-# Facebook Mock Up Business Page
+## Facebook Mock Up Business Page
 
 - [Tick Duck](https://www.duckipedia.de/Datei:Phooey_Duck.png)
 - [Daniel Düsentrieb](https://www.facebook.com/photo/?fbid=196773716033388&set=a.196773686033391&locale=it_IT)
