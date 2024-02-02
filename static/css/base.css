@@ -314,6 +314,10 @@ input[name='q']::placeholder {
     margin-top: 180vh;
 }
 
+.delete-confirm {
+    margin-top: 20vh;
+}
+
 /* Mail Chimp */
 
 #mc_embed_signup{
@@ -328,6 +332,15 @@ input[name='q']::placeholder {
 }
 
 /*  Media Queries */
+
+/* Inquiries */
+
+@media (max-width: 300px) {
+    .delete-inquiry-body {
+        max-width: 90%;
+    }
+}
+
 
 /* Products */
 
@@ -386,7 +399,14 @@ input[name='q']::placeholder {
 
 
 /* Reduce size of dropdown menu item fontsize for smaller displays */
-@media (max-width: 500px) {
+
+@media (max-width: 330px) {
+    .dropdown-item {
+        font-size: 9px;
+    }
+  }
+
+@media (min-width: 331px) and (max-width: 500px) {
     .dropdown-item {
         font-size: 11px;
     }
@@ -704,12 +724,19 @@ input[name='q']::placeholder {
     }
 }
 
-/* push content down under delivery banner for NestHub and iPad ProDevices */
+/* push content down under delivery banner for NestHub and iPad Pro Devices */
 @media (width: 1024px) and (height: 600px)  {
     .push-nest {
         margin-top: 20px;
     }
 }
+
+@media (width: 1024px) and (height: 600px)  {
+    .delete-confirm {
+        margin-top: 40vh;
+    }
+}
+
 
 @media (width: 1024px) and (height: 1366px)  {
     .push-nest {
