@@ -405,7 +405,7 @@ input[name='q']::placeholder {
 
 @media (max-width: 330px) {
     .dropdown-item {
-        font-size: 9px;
+        font-size: 14px;
     }
   }
 
