@@ -19,6 +19,9 @@ body {
     height: 100%;
 } */
 
+.white-bg {
+    background: white;
+}
 
 .bottom-away {
     position: absolute;
@@ -564,9 +567,9 @@ input[name='q']::placeholder {
 /* adjust remove button for small displays */
 @media (max-width: 576px) {
     .rem-from-wishlist-btn {
-      font-size: 10px;
+      font-size: 14px;
       padding: 5px 10px;
-      width: 150px;
+      width: 250px;
       height: 30px;
       margin-top: 0px;
     }
@@ -702,7 +705,7 @@ input[name='q']::placeholder {
 
 @media (min-width: 768px) and (min-height: 1024px)  {
     .push-footer {
-        min-height: 53vh;
+        min-height: 73vh;
     }
 }
 
@@ -712,15 +715,27 @@ input[name='q']::placeholder {
     }
 }
 
-@media (min-width: 1024px) and (min-height: 1366px)  {
+@media (min-width: 1024px) and (min-height: 1100px)  {
     .push-footer {
-        min-height: 55vh;
+        min-height: 120vh;
     }
 }
 
 @media (min-width: 1400px)  {
     .push-footer {
-        min-height: 170vh;
+        min-height: 200vh;
+    }
+}
+
+@media (min-width: 2400px)  {
+    .push-footer {
+        min-height: 260vh;
+    }
+}
+
+@media (min-height: 2400px)  {
+    .push-footer {
+        min-height: 260vh;
     }
 }
 
@@ -741,5 +756,11 @@ input[name='q']::placeholder {
 @media (width: 1024px) and (height: 1366px)  {
     .push-nest {
         margin-top: 20px;
+    }
+}
+
+@media (width: 1024px) and (height: 1366px)  {
+    .push-ipad-pro {
+        margin-top: 40px;
     }
 }

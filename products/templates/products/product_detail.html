@@ -11,11 +11,10 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container border border-black my-5">
+                <div class="image-container border rounded border-white my-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -28,7 +27,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="product-details-container mb-5 mt-md-5">
+                <div class="product-details-container p-2 border rounded bg-white mb-5 mt-md-5">
                     <p class="mb-0 mt-1">{{ product.name }} ({{ product.platform.friendly_name }})</p>
                     <p class="mb-0 mt-1">Released: {{ product.year }}</p>
                     <p class="mb-0 mt-1">{{ product.description }}</p>
@@ -56,12 +55,12 @@
                                 <button type="submit" class="to-wishlist-button cta-button-link">Add to Wishlist</button>
                             </form>
                     {% endif %}
-                    <p class="lead mb-0 mt-2 text-left font-weight-bold">Price: €{{ product.price }}</p>
+                    <p class="lead mb-0 mt-1 text-left font-weight-bold">Price: €{{ product.price }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <p class="mt-2"><strong>Quantity:</strong></p>
+                                <p class="mt-1"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group input-group-{{ product.id }}">
                                         <div class="input-group-prepend">
@@ -88,13 +87,13 @@
                             </div>
 
                             <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg mt-2">
+                                <a href="{% url 'products' %}" class="btn btn-outline-dark btn mt-2">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase small">See More Products</span>
                                 </a>
-                                <input type="submit" class="btn btn-outline-dark btn-lg mt-2" value="Add to Cart">
+                                <input type="submit" class="btn btn-outline-dark btn mt-2" value="Add to Cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
@@ -102,12 +101,12 @@
                 </div>
             </div>
         </div>
-        <hr>
+        <hr class="bg-white">
         <div class="row mb-3">
             <div class="col-md-8 card mb-4 mt-3">
                 <div class="align">
                     <!-- Comments -->
-                    <h3 class="brand col-red outline">Comments</h3>
+                    <h3 class="text-black">Comments</h3>
                         {% with comments.count as total_comments %}
                         <strong style="margin-left: 10px"><i class="far fa-comments"></i>
                             {{ total_comments }}
@@ -119,7 +118,7 @@
                     {% for comment in comments %}
                     <div class="border border-dark border-1 rounded" style="padding: 10px;">
                         <p>
-                            <span class="brand col-red outline">
+                            <span>
                             {{ comment.author }}
                             </span>
                             <span class="whitespace"></span>
@@ -150,19 +149,20 @@
                     </div>
                     {% else %}
                     {% if user.is_authenticated %}
-    
-                    <h3 class="brand col-red outline">Leave a comment:</h3>
-                    <p>Posting as: <p class="brand col-red outline">{{ user.username }}</p>
-                    <form method="post" style="margin-top: 1.3em;">
-                        {{ comment_form | crispy }}
-                        {% csrf_token %}
-                        <br>
-                        <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-outline-dark btn-lg">Submit</button>
-                        </div>
-                    </form>
+                    <div class="border border-dark border-1 rounded bg-white" style="padding: 10px;">
+                        <h3 class="text-black">Leave a comment:</h3>
+                        <p class="text-black">Posting as: <p class="text-black">{{ user.username }}</p>
+                        <form method="post" style="margin-top: 1.3em;" class="text-white">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <br>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-outline-dark btn-lg">Submit</button>
+                            </div>
+                        </form>
                     {% endif %}
                     {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
