@@ -362,15 +362,27 @@ input[name='q']::placeholder {
 
 /* login, logout, register */
 
-@media (max-width: 500px) {
+@media (max-width: 300px) {
     .top-margin {
         margin-top: 20px;
     }
 }
 
 @media (max-width: 500px) {
+    .top-margin {
+        margin-top: 160px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .top-margin {
+        margin-top: 240px;
+    }
+}
+
+@media (max-width: 500px) {
     .auth-container {
-        margin-top: 10rem !important;
+        margin-top: 6rem !important;
     }
 }
 
