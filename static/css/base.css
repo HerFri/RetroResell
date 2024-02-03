@@ -402,6 +402,10 @@ input[name='q']::placeholder {
     .top-margin {
         margin-top: 10rem !important;
     }
+
+    .verify-container {
+        margin-top: 10rem !important;
+    }
 }
 
 /* Order Details */
