@@ -27,13 +27,13 @@ class AddToWishlist(LoginRequiredMixin, View):
         wishlist_item_count = Wishlist.objects.count()
 
         if wishlist_item.exists():
-            messages.info(request, "This item is already in your wishlist!")
+            messages.info(request, f'{product.name} is already in your wishlist!')
         else:
             if wishlist_item_count >= 5:
                 messages.info(request, "You have reached the maximum number of items in your wishlist!")
             else:
                 wishlist_item = Wishlist.objects.create(user=user, product=product)
-                messages.success(request, "This item was added to your wishlist!")
+                messages.info(request, f'{product.name} was added to your wishlist!')
         print(wishlist_item_count)
         return redirect(reverse('product_detail', kwargs={'product_id': product_id}))
 
@@ -47,8 +47,8 @@ class RemovefromWishlist(LoginRequiredMixin, View):
 
         if wishlist_item.exists():
             wishlist_item.delete()
-            messages.info(request, "This item was removed from your wishlist!")
+            messages.info(request, f'{product.name} was removed from your wishlist!')
         else:
-            messages.info(request, "This item is not in your wishlist!")
+            messages.info(request, f'{product.name} is not in your wishlist!')
             
         return redirect(reverse('view_wishlist'))

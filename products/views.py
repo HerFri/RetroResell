@@ -108,7 +108,7 @@ def edit_comment(request, comment_id):
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Comment has been edited!')
+            messages.info(request, f'Comment has been edited!')
             return redirect('product_detail', product_id=comment.product.pk)
     else:
         form = CommentForm(instance=comment)
@@ -130,7 +130,7 @@ def delete_comment(request, comment_id):
     if request.user.is_superuser or request.user == comment.author:
         if request.method == 'POST':
             comment.delete()
-            messages.success(request, f'Comment deleted successfully!')
+            messages.info(request, f'Comment deleted successfully!')
             return redirect('product_detail', product_id=comment.product.pk)
         return render(request, 'products/delete_comment.html', {'comment': comment})
     else:
@@ -148,7 +148,7 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'Successfully added product!')
+            messages.info(request, f'Successfully added {product.name}!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
@@ -175,7 +175,7 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated product!')
+            messages.info(request, f'Successfully updated {product.name}!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
@@ -201,5 +201,5 @@ def delete_product(request, product_id):
     
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, 'Product deleted!')
+    messages.info(request, f'{product.name} deleted!')
     return redirect(reverse('products'))
