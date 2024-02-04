@@ -79,10 +79,17 @@ The design choices of the website are lead by the idea to present a modern onlin
 
 The predominant colors of the website are white (#ffffff), black (#000000) and the blue background color (#2b3443) of the main background wallpaper, that also provides colors of light blue (#bcd9ff) and red (#fd453b). The main background wallpaper illustrates gmaing console controllers of different eras, emphasizing the theme of Retro Videogaming. 
 
-![Color Palette]()
+![Color Palette](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/color_palette.png?raw=true)
 The color palette was generated on ![coolors.co](https://coolors.co/)
 
 For the main font style I chose the !['Kdam Thmor Pro' font from Google Fonts](https://fonts.google.com/specimen/Kdam+Thmor+Pro), because it presents a modern style that fits to the design of the website. This font is also used for the RetroResell logo at the top-left of the website.
+
+## Wireframes
+
+## Database Structure
+- To illustrate my database structure, I used ![Lucidchart]() to create an ERD-diagram:
+
+![ERD-Diagram]()
 
 ## Business Model
 The business model is B2C (Business to Customer) which means that the business sells to private customers only. 
