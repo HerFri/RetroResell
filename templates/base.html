@@ -39,7 +39,13 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>RetroResell {% block extra_title %}{% endblock %}</title>
+    <title>RetroResell 
+    {% block extra_title %}
+    - Your Source for Retro Videogaming!
+    {% endblock %}
+    </title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://res.cloudinary.com/dg39w8c5b/image/upload/v1707013035/media/favicon-16x16_bfrhj1.png" type="image/x-icon">
   </head>
   <body>
     <header class="container-fluid fixed-top">
