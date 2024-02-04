@@ -49,7 +49,12 @@ For this project several Marketing strategies were used which are SEO, Content M
 
 ## SEO 
 
-#### Keywords
+### Site title and Extra Title
+To improve SEO, 'RetroResell' has been added as title along with the
+extra title 'Your Source for Retro Videogaming', which is the slogan of the website.
+
+
+### Keywords
 For the search of suitable keywords for my website I initially used wordtracker.com. Since the free trial only allowed two searches, I used Google search results as primary way of finding suitable keywords. To check the popularity of certain Short-tail and Long-tail keywords, I also checked the 'Related Searches' and 'People also ask' sections on Google. In my search for keywords I aimed at coming up with keywords that have high volume aswell as low competition. I came up with this list of relevant keywords that are most suitable for improving the site's ranking in search engine results, ranking the keywords by the number of search results:
 
 **Short-tail keywords:**
@@ -99,6 +104,9 @@ Besides the Facebook Mock Up Page, there are Social Media clickable icons in the
 ### Email Marketing
 
 Visitors of the website can find a newsletter signup form in the footer where they can fill in their email without any further registration to receive a potential  newsletter via email that provides information about sales and new products of the website. The newsletter is handled by [Mailchimp](https://mailchimp.com/de/?currency=EURFor). For the time being, visitors can enter their email address to signup but will not receive any actual newsletter, as this is not in the scope of this project.
+
+### Favicon
+To further enhance Branding, a Favicon, representing the business's logo, has been implemented to the website.
 
 #### Robots.txt and Sitemaps.xml
 
