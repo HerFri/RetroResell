@@ -1,12 +1,13 @@
 # RetroResell
 ![RetroResell](https://raw.githubusercontent.com/HerFri/RetroResell/fa84f6c30e524b080c36bf0625e859b1445ff817/docs/readme-images/retroresell_logo.PNG)
+<br>
 Welcome to RetroResell!
 Your Source for Retro Videogaming!
 
 RetroResell is a B2C e-commerce online shop for retro videogames, consoles and equipment.
 It was built using the Django and Bootstrap Frameworks. 
 
-The website comprises different categories of products, such as vidoegames, consoles and miscellaneous/equipment, for different platforms like Super Nintendo, Nintendo 64, GameBoy etc. .
+The website comprises different categories of products, such as videogames, consoles and miscellaneous/equipment, for different platforms like Super Nintendo, Nintendo 64, GameBoy etc. .
 
 Moreover, authenticated users can post a trade offer as an inquiry for selling their vidoegames, consoles and other belongings that are linked to retro videogaming.
 
@@ -80,17 +81,37 @@ The design choices of the website are lead by the idea to present a modern onlin
 
 The predominant colors of the website are white (#ffffff), black (#000000) and the blue background color (#2b3443) of the main background wallpaper, that also provides colors of light blue (#bcd9ff) and red (#fd453b). The main background wallpaper illustrates gmaing console controllers of different eras, emphasizing the theme of Retro Videogaming. 
 
-![Color Palette](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/color_palette.png?raw=true)
-The color palette was generated on ![coolors.co](https://coolors.co/)
+<details>
+  <summary>Color Palette</summary>
+<img src="https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/color_palette.png?raw=true"><br>
+</details>
+The color palette was generated on [coolors.co](https://coolors.co/)
+<details>
+  <summary>Background</summary>
+<img src="https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/color_palette.png?raw=true"><br>
+</details>
 
-For the main font style I chose the !['Kdam Thmor Pro' font from Google Fonts](https://fonts.google.com/specimen/Kdam+Thmor+Pro), because it presents a modern style that fits to the design of the website. This font is also used for the RetroResell logo at the top-left of the website.
+For the main font style I chose the ['Kdam Thmor Pro' font from Google Fonts](https://fonts.google.com/specimen/Kdam+Thmor+Pro), because it presents a modern style that fits to the design of the website. This font is also used for the RetroResell logo at the top-left of the website.
 
 ## Wireframes
 
 ## Database Structure
-- To illustrate my database structure, I used ![Lucidchart]() to create an ERD-diagram:
+To illustrate my database structure, I used [Lucidchart](lucid.app) to create an ERD-diagram:
+<details>
+  <summary>ERD Diagram</summary>
+<img src="https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/erd_diagram.png?raw=true"><br>
+</details>
 
-![ERD-Diagram](https://raw.githubusercontent.com/HerFri/RetroResell/fa84f6c30e524b080c36bf0625e859b1445ff817/docs/readme-images/erd_diagram.png)
+For this project, Object-Oriented Programming princiciples and Django's class-based generic views were applied. For the User authentication system, the [Allauth library](https://docs.allauth.org/en/latest/) was used. Alongside the models presented in the E-Commerce walkthrough (User, UserProfile, Product, Order, OrderLineItem), I introduced the Category and Platform models that complement the Product model, as well as three other custom models (Wishlist, Inquiry, Comment) that provide additonal functionalities for the website:
+
+### Wishlist
+The Wishlist model includes two Foreign Keys, product and user. The product Foreign Key links to a specific product that has been added to the wishlist and the user Foreing Key to this specific user. Moreover, it comprises an added_on field that saves the date on which an item has been added to the wishlist.
+
+### Inquiry
+The Inquiry model has one Foreign Key that links to the User model, specifying the user who posted an inquiry. The name, email, phone_number fields are implemented in the Inquiry form of the website so that users can fill in their current personal data. The subject and order_number Charfield are used in the Inquiry form so users can fill in their reasons of their inquiry and the order number, if it is available. The created_on and updated_on DateTimeField track the dates, when an inquiry was posted or updated. By making use of the image field in the Inquiry form, users can upload pictures that are relevant to their inquiry. Finally, in the admin_reply TextField, the website admin can reply to a inquiry by adding a message through the admin panel.
+
+### Comment
+The Comment Model includes two Foreign Keys, the product field that is linked to the Product model and the respective product, which has been commented by the user, and the author field that is linked to the User model and therefore the user that commented on a product. Moreover, the comment model comprises the name field, through which comments can be assigned names through the admin panel, the body Textfield, in which the user writes the comment through the Comment form, the created_on field that specifies the date a comment has beend written, and the approved BooleanField, that is set by default to false. After commenting on a product, the comment has to be approved by the admin, setting this field to true and making it visible on the website.
 
 ## Business Model
 The business model is B2C (Business to Customer) which means that the business sells to private customers only. 
@@ -145,10 +166,10 @@ For a social media marketing approach, a Facebook MockUp Business Page has been 
 
 <details>
   <summary>Facebook Mockup Page</summary>
-<img src="https://github.com/HerFri/RetroResell/blob/main/docs/readme-files/facebook_mock_up.png?raw=true"><br>
+<img src="https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/facebook_mock_up.png?raw=true"><br>
 </details>
 
-Besides the Facebook Mock Up Page, there are Social Media clickable icons in the footer of the website, which by click open up a new tab to the respective social media site landing page. At this momement, there are no real social media pages provided to those links that represent the company, but these could be added in the future.
+Beside the Facebook Mock Up Page, there are Social Media clickable icons in the footer of the website, which by click open up a new tab to the respective social media site landing page. At this momement, there are no real social media pages provided to those links that represent the company, but these could be added in the future.
 
 ### Email Marketing
 
@@ -165,8 +186,12 @@ To further enhance the website's SEO ranking, a robots.txt and a sitemap.xml fil
 
 # Images
 
+## Website
 The product images of the website are made my me.
 All other image sources are listed here:
+
+- [Background](https://wallpaperaccess.com/4k-retro-gaming)
+
 
 ## Facebook Mock Up Business Page
 
