@@ -242,8 +242,8 @@ After the admin replied to the inquiry, the 'Inquiry Status' field changes to 'A
 ![Inquiry Admin Reply](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/inquiry_admin_reply.PNG?raw=true)
 When an inquiry has been dealt with or the user decides to delete the inquiry for whatever reason, the user can do this by clicking on the 'Delete Inquiry' button. After clicking, the user is lead to the 'Confirm Inquiry Deletion' page. 
 ![Confirm Inquiry Deletion](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/confirm_inquiry_deletion.PNG?raw=true)
-When clicking on 'Cancel', the user is brought back to the 'Inquiry Details' Page. When clicking on 'Yes', the inquiry will be deleted, the user brought back to the 'Inquiry Details' Page and an info message toast is popping up in the top right corner of the website.
-![Delete Inquiry](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/delete_inquiry.PNG?raw=true)
+When clicking on 'Cancel', the user is brought back to the 'Inquiry Details' Page. When clicking on 'Yes', the inquiry will be deleted, the user brought back to the 'Inquiry Details' Page and an info message toast is popping up in the top right corner of the website stating that the inquiry has been deleted.
+![Delete Inquiry]()
 
 ## Business Model
 The business model is B2C (Business to Customer) which means that the business sells to private customers only. 
