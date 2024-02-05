@@ -179,27 +179,71 @@ When clicking on the 'Edit' Button of the comment, logged in users are lead to t
 When clicking on the 'Delete' Button of the comment, logged in users are lead to the Confirm Delete page. After pressing the 'Delete' Button, the comment will be deleted. Pressing the 'Cancel' button will bring them back to the products detail page.
 ![Delete comment](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/delete_comment.PNG?raw=true)
 
+## Register
+Users can register for an account by clicking the dropdown menu item 'Register' of the 'My Account' icon. They will be lead to the Register page, where they are asked to enter their email address, a username and a password.
+![Register]()
+After registering, the user is asked to verify the E-mail address by following a link that has been sent to their email address.
+![Verify Email]()
+After following the provided link, the user is asked to confirm the E-mail adress.
+![Confirm E-Mail]()
+After confirming, a success toast message pops up in the top right corner of the website and the user is ready to login.
+![Confirm Success]()
+
+## Login
+On the login page the user is asked to enter their username and password. If the user is not registered yet, they can click on 'Register'.
+![Login]()
+If the user enters a wrong username or password they are prompted with the message 'The username and/or password you specified are not correct'.
+![Wrong Password]()
+
+## Forgot Password
+Users can reset their password in case they forgot it. When clicking on 'Forgot Password?' on the Login page, they will be directed to the 'Password Reset' page. 
+![Password Reset]()
+After entering the email address and clicking 'Reset My Password', they will be directed to a page with the message that an e-mail with a link has been sent to the e-mail adress the user provided.
+![Password Reset Message]()
+After following the link in the e-mail, the user is directed to the 'Change Password' page where they can fill in a new password and change it by pushing the 'Change Password' button.
+![Change Password]()
+After pressing the 'Change Password' button, a textfield and a success toast message will inform the user that the password has been changed successfully.
+![Change Password Success]()
+
+## Logout
+When clicking on 'Logout', users are directed to a page that asks them to to confirm if they really want to log out. After clicking the 'Log Out' button, the user will be logged out of their account.
+![Logout]()
+
+## Ordering
+Guest users that did not sign up for an account can order products as well as authenticated users. When no products have been added to the shopping cart yet, a text in the shopping cart page will say that 'Your cart is empty'.
+![Empty cart]()
+After adding a product to the cart, a success message toast will pop up in the top right corner of the website, including a summary of the shopping cart providing information about the added products and their quantity, the price excluding delivery costs and a reminder about the required amount to receive free next day delivery. On the bottom of the message toast is a 'Secure Checkout' button that directs the user to the Checkout page.
+![Product Added]()
+By clicking the 'Secure Checkout' button the user is directed to the 'Shopping Cart' page where the user can adjust the quantity of the products of the bag or remove them.
+![Shopping Cart Summary]()
+After clicking the 'Secure Checkout' button, the user is directed to the 'Checkout' page, where they are asked their personal information like full name, email and delivery address. Users can save their delivery information to their profile for future orders. To finalize the order, users are asked to fill in their Credit Card number for billing.
+![Checkout]()
+After clicking on the 'Complete Order' button, the user is directed to the 'Checkout Success' page, where a summary of the order is provided and a success toast message will pop up in the top right corner of the website.
+![Checkout Success]()
+
+
+
 ## Wishlist
 The empty wishlist looks like the screenshot below, informing the user with a text that the wishlist is empty. Moreover, the 'Back to Products' button brings the user back to the All products page.
-![Empty Wishlist]()
+![Empty Wishlist](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/empty_wishlist.PNG?raw=true)
 If the user added some products to the wishlist, these are listed on the wishlist page. If the user decides to delete a wishlist item, the button 'Remove from Wishlist' can be pressed, leading to deleting the product and showing a toast message on the top right corner of the website.
-![Delete Wishlist Item]()
+![Delete Wishlist Item](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/delete_wishlist_item.PNG?raw=true)
 
 ## My Inquiries
 Logged in users can enter the 'My Inquiries' page by either clicking on the 'Sell Your Games & Consoles!' navbar menu option or clicking on the 'My Account' icon and clicking on the 'My Inquiries' option. The 'My Inquiries' page consists of the Inquiry form and the Inquiry History section, where all posted inquiries of a user are displayed. Logged in users can post an inquiry about every issue that concerns the website, e.g. complaining about missing items of an order, questions if the order has been sent already or even make sell offers for consoles and games a user might want to sell! The name, email address and subject fields of the Inquiry form are mandatory, so the website admin has the current personal details of the person posting an inquiry and can contact that person back. If a person wants to upload a picture of the order or the items he or she wants to sell, this person can press the 'Upload Image' button and upload an image to complement the inquiry. After filling in the fields, users can click on the 'Submit' button to post the inquiry for review.
-![My Inquiries]()
+![My Inquiries](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/my_inquiries.PNG?raw=true)
 After posting the inquiry, a info message toast will pop up in the top right corner of the website and inform the user that the inquiry has been submitted successfully and will be reviewed shortly.
-![Inquiry Sent]()
+![Inquiry Sent](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/inquiry_sent.PNG?raw=true)
 Moreover, the inquiry will be visible under the 'Inquiry History' section and the details of the inquiry can be observed by clicking the 'See Details' button. After clicking, the user is lead to the Inquiry Details page which views the information about the inquiry, including the uploaded picture if a picture was uploaded.
-![Inquiry Details]()
+![Inquiry Details](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/inquiry_details.PNG?raw=true)
 The 'Inquiry Status' field informs the user if the inquiry is still being reviewed or if the website admin already answered to that inquiry. As an admin, I can check all inquiries in my admin panel and write a reply to the inquiry.
-![Inquiry Reply]()
+![Inquiry Reply](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/inquiry_reply.PNG?raw=true)
 After the admin replied to the inquiry, the 'Inquiry Status' field changes to 'Admin Message' with the respective Admin reply.
-![Inquiry Admin Reply]()
+![Inquiry Admin Reply](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/inquiry_admin_reply.PNG?raw=true)
 When an inquiry has been dealt with or the user decides to delete the inquiry for whatever reason, the user can do this by clicking on the 'Delete Inquiry' button. After clicking, the user is lead to the 'Confirm Inquiry Deletion' page. 
-![Confirm Inquiry Deletion]()
+![Confirm Inquiry Deletion](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/confirm_inquiry_deletion.PNG?raw=true)
 When clicking on 'Cancel', the user is brought back to the 'Inquiry Details' Page. When clicking on 'Yes', the inquiry will be deleted, the user brought back to the 'Inquiry Details' Page and an info message toast is popping up in the top right corner of the website.
-![Delete Inquiry]()
+![Delete Inquiry](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/delete_inquiry.PNG?raw=true)
 
 ## Business Model
 The business model is B2C (Business to Customer) which means that the business sells to private customers only. 

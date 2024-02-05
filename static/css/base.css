@@ -796,7 +796,7 @@ input[name='q']::placeholder {
 
 @media (min-width: 768px) and (min-height: 1184px)  {
     .push-big-height {
-        min-height: 1178px;
+        min-height: 1185px;
     }
 
     .push-nest {
