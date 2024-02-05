@@ -360,7 +360,13 @@ input[name='q']::placeholder {
     }
 }
 
-/* login, logout, register */
+/* Login, Logout, Register, 404 Error Page */
+
+@media (max-width: 300px) {
+    .shop-now-button {
+        width: 200px;
+    }
+}
 
 @media (max-width: 300px) {
     .top-margin {
