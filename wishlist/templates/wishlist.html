@@ -17,7 +17,7 @@
         <div class="col-sm ">
             <h2 class="logo-font mb-4 text-center text-black btn-outline-black mt-3">My Wishlist</h2>
         </div>
-        <div class="col-sm"></div>
+    <di v class="col-sm"></di>
     </div>
     <div class="row"> 
         {% if wishlist_items %}
@@ -74,15 +74,15 @@
         {% endfor %}
         {% else %}
             <div class="container min-hgt">
-                <p class="lead mb-5">Your wishlist is empty.</p>
-                <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg">
+                <p class="lead mb-5 text-white">Your wishlist is empty.</p>
+                <a href="{% url 'products' %}" class="btn bg-white btn-lg">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>
                     <span class="text-uppercase">Back to Products</span>
                 </a>
             </div>
-                {% endif %}
+            {% endif %}
     </div> 
 </div>
 {% endblock %}

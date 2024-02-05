@@ -119,22 +119,22 @@ As this project was made with the Django framework, every page of the website ex
 
 ### Navigation Bar
 The responsive navigation bar consists of the RetroResell logo, the search bar, the delivery threshold banner, the navbar menu and the clickable icons including the links that lead to the 'My Account', 'My Wishlist' and the Shopping Cart pages. The RetroResell logo serves as a clickable home button that leads users back to the homepage. Under the search bar the navbar menu is located, which comprises the product categories of the website 'All Products', 'Consoles', 'Games', 'Equipment/Miscellaneous' and the 'Sell Your Games & Consoles!' section, that leads to the Inquiry Page if users are authenticated. If unauthenticated or not logged in users click the 'My Account' icon, the dropdown menu will show the options 'Register' and 'Login'.
-![Navbar]()
+![Navbar](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/navbar.PNG?raw=true)
 
 Logged in users will see the options 'My Profile', 'My Inquiries' and 'Logout', while the website admin will additionally see the option 'Product Management' in the dropdown menu.
-![Navbar logged in]()
+![Navbar logged in](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/navbar_logged_in.PNG?raw=true)
 
 By clicking the 'My Wishlist' icon or the navbar option 'Sell Your Games & Consoles!', not logged in users are lead to the log in page.
-![Login page]()
+![Login page](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/login.PNG?raw=true)
 
 By clicking on one of the product categories of the navbar menu, a dropdown menu will open which shows the available platforms for each category.
-![Navbar Menu Options]()
+![Navbar Menu Options](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/navbar_menu_options.PNG?raw=true)
 
 For the 'All Products' navbar menu item, it will show all available options to sort all products.
-![Navbar All Products]()
+![Navbar All Products](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/navbar_menu_all_products.PNG?raw=true)
 
-In the middle of the navbar users can find the searchbar. By implementing the search results functionality, users can search for their desired products. By typing in a search term and clicking the search icon, the systems checks if the desired product is available. In the screenshit below, a user searched for the term 'Nintendo 64', and the system found one product, emphasizing it by showing the text '1 Product found for 'Nintendo 64'.
-![Product Found]()
+In the middle of the navbar users can find the searchbar. By implementing the search results functionality, users can search for their desired products. By typing in a search term and clicking the search icon, the systems checks if the desired product is available. In the screenshot below, a user searched for the term 'Nintendo 64', and the system found one product, emphasizing it by showing the text '1 Product found for 'Nintendo 64'.
+![Product Found](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/product_found.PNG?raw=true)
 
 If the desired product was not found, the text will indicate that zero products have been found. In the screenshot below, a user searched for the term 'SEGA Genesis', but the system could not find any product that relates to this term.
 ![Product not Found]()
@@ -144,18 +144,42 @@ The delivery threshold banner under the navbar menu informs user of the free del
 
 
 The navbar is fully responsive and will show a burger menu with all options for devices with smaller width:
-![Navbar Responsive]()
+![Navbar Responsive](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/navbar_responsive.PNG?raw=true)
 
 ### Footer
 As the navbar, the footer is present on all pages of the website and is fully responsive. It consists of some information like the address and email adress of the website's company, the clickable Privacy Policy, the clickable social media icons and the RetroResell Newsletter.
-![Footer]()
+![Footer](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/footer.PNG?raw=true)
 
 By clicking 'Our Privacy Policy', a new tab will be opened with the company's privacy policy, where users can read about how their data is processed. 
-![Privacy Policy]()
+![Privacy Policy](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/privacy_policy.PNG?raw=true)
 
 In the middle of the footer there are the clickable social media icons that, by clicking on the respective icon, will open the respective social media page in a new tab. Next to it is the newsletter signup form where interested users can sign up for the RetroResell newsletter.
 
 ## Homepage
+On the homepage website visitors are greeted with a sliding text that goes from right to left. The sliding text is 'Welcome to RetroResell! Your Source for Retro Videogaming!' which is the motto of the website. Under the sliding text website visitors will find a carousel with three changing pictures, presenting one image of an available product for each product category. By clicking on one of the pictures, users will be directed to the respective products page. 
+![Homepage]()
+
+## Products Page
+On the products page all available products, depending on the user's search criteria, are presented. The products are presented as card that consist of the product image and the products' information like name, price, category and rating beneath it. On the top, below the free delivery banner, the headline 'Products' is shown, as well as the products' category that is positioned under the headline. On the left side, a 'Back to all Products' buttons is present, which will lead the user after clicking it to the products page where all products are listed. Beneath it is a textfield that indicates how many products have beend found for the respective category. In the screenshot below a user clicked on the navbar menu option 'Consoles' and the dropdown option 'All Consoles'.
+![Products Page]()
+On the right side of the page is a dropdown menu that offers sorting options. By selecting an option, the products are sorted accordingly. In the screenshot below the user chose the option 'Price (low to high)' and the website ordered the products accordingly.
+![Sort Products]()
+
+## Product Details
+After clicking on one of the products' images in the product card of the products page, users will be lead to the product detail page. Additionally to the product image and the already menationed product information on the products page, user will find a short description of the product. Moreover, users can adjust the quantity of the product they want to buy by clicking on the Plus or Minus quantity buttons. Under the quantity buttons, users will find the 'See more Products' buttons that, by clicking it, leads them to the 'All Products Page'. Next to it is the 'Add to Cart Button'. By clicking it, a toast message will pop up in the top right corner, stating that the item has been successfully added to the cart. In the screenshot below, a user added a product which price is under the 70€ delivery threshold. Therefore the toast message informs the user that by spending more money the item will be delivered for free on the next day. 
+![Product Detail No Login]()
+As opposed to not logged in users, logged in users are able to see the 'Add to Wishlist' button, which, by clicking it, will add a product to the wishlist, if the limit of 5 wishlist items is not exceeded. By clicking it, a info toast message will pop up in the top right corner, informing the user that the product has been added to the wishlist.
+![Item added to Wishlist]()
+Moreover, not logged in users are only able to read comments, while logged in users are able to see the Comment form and write a comment.
+![Comment Form]()
+After writting a comment and clicking the submit button of the Comment form, logged in users will see a textfield that informs them that their comment is waiting approval. After the comment has been approved by the admin in the admin panel, the comment will be visible in the Comments section. Additionally, logged in users are able to edit or delete their comments as part of the CRUD-functionality. Therefore, there are 'Edit' and 'Delete' buttons under the comment, so the original authors can adjust or delete them. The admin of the website can edit or delete either comment. In the screenshot below, the present comment is from User Herbe, who is logged in at this moment and can edit or delete the comment.
+![Comment Awaiting Approval]()
+When clicking on the 'Edit' Button of the comment, logged in users are lead to the Edit Comment page, where they can make changes on their comment. After pressing the 'Submit' button, the comment will be changed.
+![Edit comment]()
+When clicking on the 'Delete' Button of the comment, logged in users are lead to the Confirm Delete page. After pressing the 'Delete' Button, the comment will be deleted. Pressing the 'Cancel' button will bring them back to the products detail page.
+![Delete comment]()
+
+## Wishlist
 
 
 
