@@ -113,6 +113,52 @@ The Inquiry model has one Foreign Key that links to the User model, specifying t
 ### Comment
 The Comment Model includes two Foreign Keys, the product field that is linked to the Product model and the respective product, which has been commented by the user, and the author field that is linked to the User model and therefore the user that commented on a product. Moreover, the comment model comprises the name field, through which comments can be assigned names through the admin panel, the body Textfield, in which the user writes the comment through the Comment form, the created_on field that specifies the date a comment has beend written, and the approved BooleanField, that is set by default to false. After commenting on a product, the comment has to be approved by the admin, setting this field to true and making it visible on the website.
 
+# Features
+## Base
+As this project was made with the Django framework, every page of the website extends its' content from the base.html file, meaning that the content of the base.html is present in every website page. In the following, those features are presented that are extended from the base.html file.
+
+### Navigation Bar
+The responsive navigation bar consists of the RetroResell logo, the search bar, the delivery threshold banner, the navbar menu and the clickable icons including the links that lead to the 'My Account', 'My Wishlist' and the Shopping Cart pages. The RetroResell logo serves as a clickable home button that leads users back to the homepage. Under the search bar the navbar menu is located, which comprises the product categories of the website 'All Products', 'Consoles', 'Games', 'Equipment/Miscellaneous' and the 'Sell Your Games & Consoles!' section, that leads to the Inquiry Page if users are authenticated. If unauthenticated or not logged in users click the 'My Account' icon, the dropdown menu will show the options 'Register' and 'Login'.
+![Navbar]()
+
+Logged in users will see the options 'My Profile', 'My Inquiries' and 'Logout', while the website admin will additionally see the option 'Product Management' in the dropdown menu.
+![Navbar logged in]()
+
+By clicking the 'My Wishlist' icon or the navbar option 'Sell Your Games & Consoles!', not logged in users are lead to the log in page.
+![Login page]()
+
+By clicking on one of the product categories of the navbar menu, a dropdown menu will open which shows the available platforms for each category.
+![Navbar Menu Options]()
+
+For the 'All Products' navbar menu item, it will show all available options to sort all products.
+![Navbar All Products]()
+
+In the middle of the navbar users can find the searchbar. By implementing the search results functionality, users can search for their desired products. By typing in a search term and clicking the search icon, the systems checks if the desired product is available. In the screenshit below, a user searched for the term 'Nintendo 64', and the system found one product, emphasizing it by showing the text '1 Product found for 'Nintendo 64'.
+![Product Found]()
+
+If the desired product was not found, the text will indicate that zero products have been found. In the screenshot below, a user searched for the term 'SEGA Genesis', but the system could not find any product that relates to this term.
+![Product not Found]()
+
+The delivery threshold banner under the navbar menu informs user of the free delivery for orders over 70€.
+![Delivery Banner]()
+
+
+The navbar is fully responsive and will show a burger menu with all options for devices with smaller width:
+![Navbar Responsive]()
+
+### Footer
+As the navbar, the footer is present on all pages of the website and is fully responsive. It consists of some information like the address and email adress of the website's company, the clickable Privacy Policy, the clickable social media icons and the RetroResell Newsletter.
+![Footer]()
+
+By clicking 'Our Privacy Policy', a new tab will be opened with the company's privacy policy, where users can read about how their data is processed. 
+![Privacy Policy]()
+
+In the middle of the footer there are the clickable social media icons that, by clicking on the respective icon, will open the respective social media page in a new tab. Next to it is the newsletter signup form where interested users can sign up for the RetroResell newsletter.
+
+## Homepage
+
+
+
 ## Business Model
 The business model is B2C (Business to Customer) which means that the business sells to private customers only. 
 
