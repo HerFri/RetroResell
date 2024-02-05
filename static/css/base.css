@@ -756,6 +756,12 @@ input[name='q']::placeholder {
 }
 
 /* push content down under delivery banner for different device sizes */
+@media (min-width: 992px) {
+    .push-cart {
+        margin-top: 30px;
+    }
+}
+
 @media (min-width: 768px) and (min-height: 1184px)  {
     .push-big-height {
         min-height: 975px;
@@ -763,6 +769,14 @@ input[name='q']::placeholder {
 
     .push-nest {
         margin-top: 25px;
+    }
+
+    .inquiry-push {
+        min-height: 70vh;
+    }
+
+    .mrgn-top {
+        margin-top: 30px;
     }
 }
 
