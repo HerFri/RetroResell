@@ -755,7 +755,23 @@ input[name='q']::placeholder {
     }
 }
 
-/* push content down under delivery banner for NestHub and iPad Pro Devices */
+/* push content down under delivery banner for different device sizes */
+@media (min-width: 768px) and (min-height: 1372px)  {
+    .push-big-height {
+        min-height: 975px;
+    }
+
+    .push-nest {
+        margin-top: 25px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1099px)  {
+    #slide-container {
+        margin-top: 20px;
+    }
+}
+
 @media (width: 1024px) and (height: 600px)  {
     .push-nest {
         margin-top: 20px;

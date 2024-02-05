@@ -1,4 +1,5 @@
 # RetroResell
+![RetroResell](https://raw.githubusercontent.com/HerFri/RetroResell/fa84f6c30e524b080c36bf0625e859b1445ff817/docs/readme-images/retroresell_logo.PNG)
 Welcome to RetroResell!
 Your Source for Retro Videogaming!
 
@@ -89,7 +90,7 @@ For the main font style I chose the !['Kdam Thmor Pro' font from Google Fonts](h
 ## Database Structure
 - To illustrate my database structure, I used ![Lucidchart]() to create an ERD-diagram:
 
-![ERD-Diagram]()
+![ERD-Diagram](https://raw.githubusercontent.com/HerFri/RetroResell/fa84f6c30e524b080c36bf0625e859b1445ff817/docs/readme-images/erd_diagram.png)
 
 ## Business Model
 The business model is B2C (Business to Customer) which means that the business sells to private customers only. 
