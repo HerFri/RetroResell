@@ -137,17 +137,17 @@ In the middle of the navbar users can find the searchbar. By implementing the se
 ![Product Found](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/product_found.PNG?raw=true)
 
 If the desired product was not found, the text will indicate that zero products have been found. In the screenshot below, a user searched for the term 'SEGA Genesis', but the system could not find any product that relates to this term.
-![Product not Found]()
+![Product not Found](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/product_not_found.PNG?raw=true)
 
 The delivery threshold banner under the navbar menu informs user of the free delivery for orders over 70€.
-![Delivery Banner]()
+![Delivery Banner](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/delivery_banner.PNG?raw=true)
 
 
 The navbar is fully responsive and will show a burger menu with all options for devices with smaller width:
 ![Navbar Responsive](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/navbar_responsive.PNG?raw=true)
 
 ### Footer
-As the navbar, the footer is present on all pages of the website and is fully responsive. It consists of some information like the address and email adress of the website's company, the clickable Privacy Policy, the clickable social media icons and the RetroResell Newsletter.
+As the navbar, the footer is present on all pages of the website. It consists of some information like the address and email adress of the website's company, the clickable Privacy Policy, the clickable social media icons and the RetroResell Newsletter.
 ![Footer](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/footer.PNG?raw=true)
 
 By clicking 'Our Privacy Policy', a new tab will be opened with the company's privacy policy, where users can read about how their data is processed. 
@@ -157,31 +157,49 @@ In the middle of the footer there are the clickable social media icons that, by 
 
 ## Homepage
 On the homepage website visitors are greeted with a sliding text that goes from right to left. The sliding text is 'Welcome to RetroResell! Your Source for Retro Videogaming!' which is the motto of the website. Under the sliding text website visitors will find a carousel with three changing pictures, presenting one image of an available product for each product category. By clicking on one of the pictures, users will be directed to the respective products page. 
-![Homepage]()
+![Homepage](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/homepage.PNG?raw=true)
 
 ## Products Page
 On the products page all available products, depending on the user's search criteria, are presented. The products are presented as card that consist of the product image and the products' information like name, price, category and rating beneath it. On the top, below the free delivery banner, the headline 'Products' is shown, as well as the products' category that is positioned under the headline. On the left side, a 'Back to all Products' buttons is present, which will lead the user after clicking it to the products page where all products are listed. Beneath it is a textfield that indicates how many products have beend found for the respective category. In the screenshot below a user clicked on the navbar menu option 'Consoles' and the dropdown option 'All Consoles'.
-![Products Page]()
+![Products Page](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/products_page.PNG?raw=true)
 On the right side of the page is a dropdown menu that offers sorting options. By selecting an option, the products are sorted accordingly. In the screenshot below the user chose the option 'Price (low to high)' and the website ordered the products accordingly.
-![Sort Products]()
+![Sort Products](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/sort_products.PNG?raw=true)
 
 ## Product Details
 After clicking on one of the products' images in the product card of the products page, users will be lead to the product detail page. Additionally to the product image and the already menationed product information on the products page, user will find a short description of the product. Moreover, users can adjust the quantity of the product they want to buy by clicking on the Plus or Minus quantity buttons. Under the quantity buttons, users will find the 'See more Products' buttons that, by clicking it, leads them to the 'All Products Page'. Next to it is the 'Add to Cart Button'. By clicking it, a toast message will pop up in the top right corner, stating that the item has been successfully added to the cart. In the screenshot below, a user added a product which price is under the 70€ delivery threshold. Therefore the toast message informs the user that by spending more money the item will be delivered for free on the next day. 
-![Product Detail No Login]()
+![Product Detail No Login](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/product_detail_no_login.PNG?raw=true)
 As opposed to not logged in users, logged in users are able to see the 'Add to Wishlist' button, which, by clicking it, will add a product to the wishlist, if the limit of 5 wishlist items is not exceeded. By clicking it, a info toast message will pop up in the top right corner, informing the user that the product has been added to the wishlist.
-![Item added to Wishlist]()
+![Item added to Wishlist](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/item_added_to_wishlist.PNG?raw=true)
 Moreover, not logged in users are only able to read comments, while logged in users are able to see the Comment form and write a comment.
-![Comment Form]()
+![Comment Form](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/comment_form.PNG?raw=true)
 After writting a comment and clicking the submit button of the Comment form, logged in users will see a textfield that informs them that their comment is waiting approval. After the comment has been approved by the admin in the admin panel, the comment will be visible in the Comments section. Additionally, logged in users are able to edit or delete their comments as part of the CRUD-functionality. Therefore, there are 'Edit' and 'Delete' buttons under the comment, so the original authors can adjust or delete them. The admin of the website can edit or delete either comment. In the screenshot below, the present comment is from User Herbe, who is logged in at this moment and can edit or delete the comment.
-![Comment Awaiting Approval]()
+![Comment Awaiting Approval](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/comment_awaiting_approval.PNG?raw=true)
 When clicking on the 'Edit' Button of the comment, logged in users are lead to the Edit Comment page, where they can make changes on their comment. After pressing the 'Submit' button, the comment will be changed.
-![Edit comment]()
+![Edit comment](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/edit_comment.PNG?raw=true)
 When clicking on the 'Delete' Button of the comment, logged in users are lead to the Confirm Delete page. After pressing the 'Delete' Button, the comment will be deleted. Pressing the 'Cancel' button will bring them back to the products detail page.
-![Delete comment]()
+![Delete comment](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/delete_comment.PNG?raw=true)
 
 ## Wishlist
+The empty wishlist looks like the screenshot below, informing the user with a text that the wishlist is empty. Moreover, the 'Back to Products' button brings the user back to the All products page.
+![Empty Wishlist]()
+If the user added some products to the wishlist, these are listed on the wishlist page. If the user decides to delete a wishlist item, the button 'Remove from Wishlist' can be pressed, leading to deleting the product and showing a toast message on the top right corner of the website.
+![Delete Wishlist Item]()
 
-
+## My Inquiries
+Logged in users can enter the 'My Inquiries' page by either clicking on the 'Sell Your Games & Consoles!' navbar menu option or clicking on the 'My Account' icon and clicking on the 'My Inquiries' option. The 'My Inquiries' page consists of the Inquiry form and the Inquiry History section, where all posted inquiries of a user are displayed. Logged in users can post an inquiry about every issue that concerns the website, e.g. complaining about missing items of an order, questions if the order has been sent already or even make sell offers for consoles and games a user might want to sell! The name, email address and subject fields of the Inquiry form are mandatory, so the website admin has the current personal details of the person posting an inquiry and can contact that person back. If a person wants to upload a picture of the order or the items he or she wants to sell, this person can press the 'Upload Image' button and upload an image to complement the inquiry. After filling in the fields, users can click on the 'Submit' button to post the inquiry for review.
+![My Inquiries]()
+After posting the inquiry, a info message toast will pop up in the top right corner of the website and inform the user that the inquiry has been submitted successfully and will be reviewed shortly.
+![Inquiry Sent]()
+Moreover, the inquiry will be visible under the 'Inquiry History' section and the details of the inquiry can be observed by clicking the 'See Details' button. After clicking, the user is lead to the Inquiry Details page which views the information about the inquiry, including the uploaded picture if a picture was uploaded.
+![Inquiry Details]()
+The 'Inquiry Status' field informs the user if the inquiry is still being reviewed or if the website admin already answered to that inquiry. As an admin, I can check all inquiries in my admin panel and write a reply to the inquiry.
+![Inquiry Reply]()
+After the admin replied to the inquiry, the 'Inquiry Status' field changes to 'Admin Message' with the respective Admin reply.
+![Inquiry Admin Reply]()
+When an inquiry has been dealt with or the user decides to delete the inquiry for whatever reason, the user can do this by clicking on the 'Delete Inquiry' button. After clicking, the user is lead to the 'Confirm Inquiry Deletion' page. 
+![Confirm Inquiry Deletion]()
+When clicking on 'Cancel', the user is brought back to the 'Inquiry Details' Page. When clicking on 'Yes', the inquiry will be deleted, the user brought back to the 'Inquiry Details' Page and an info message toast is popping up in the top right corner of the website.
+![Delete Inquiry]()
 
 ## Business Model
 The business model is B2C (Business to Customer) which means that the business sells to private customers only. 

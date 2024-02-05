@@ -463,6 +463,29 @@ input[name='q']::placeholder {
 /* Reduce size of newsletter form for smaller displays */
 
 
+@media (max-width: 279px) {
+    #mc_embed_signup,
+    #mc_embed_signup_scroll,
+    #mc_embed_shell,
+    #mc-embedded-subscribe-form {
+        max-width: 90% !important;
+    }
+  }
+
+
+@media (max-width: 279px) {
+    .subscribe-text {
+        font-size: 10px !important;
+    }
+}
+
+@media (max-width: 279px) {
+    #mc-embedded-subscribe {
+       max-width: 80% !important;
+    }
+}
+  
+
 @media (max-width: 330px) {
     #mc_embed_signup {
         width: 220px !important;
@@ -553,6 +576,13 @@ input[name='q']::placeholder {
     }
   } 
 
+/* Reduce max-width of image-container for very small screens */
+
+@media (max-width: 330px)  {
+    .inquiry-image {
+        max-width: 90%;
+    }
+} 
 
 /* adjust paragraphs for small displays */
 

@@ -23,7 +23,7 @@ def user_inquiry(request):
             inquiry.user = request.user
             inquiry.save()
             message_text = 'Your inquiry has been submitted successfully and will be reviewed shortly.'
-            messages.success(request, message_text)
+            messages.info(request, message_text)
             return redirect('inquiries')    
     else:
         form = InquiryForm()
@@ -54,7 +54,7 @@ def delete_inquiry(request, inquiry_id):
 
     if request.method == 'POST':
         inquiry.delete()
-        messages.success(
+        messages.info(
             request, 'Your inquiry has been deleted successfully.'
         )
         return redirect('inquiries')
