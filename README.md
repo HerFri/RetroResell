@@ -76,6 +76,75 @@ For this project, overall 28 User Stories have been created, that guided the dev
 - [#22](https://github.com/HerFri/RetroResell/issues/22) As a Store Owner/Admin I can add (create), edit and delete products so that I can update the product selection of my store.
 - [#23](https://github.com/HerFri/RetroResell/issues/23) As a Store Owner/Admin I can add (create), edit and delete a product from the front end of the site so that I can change product prices, descriptions, images, and other product criteria without the need of doing this in the admin panel.
 
+## Business Model
+The business model is B2C (Business to Customer) which means that the business sells to private customers only. 
+
+## Marketing Strategies
+For this project several Marketing strategies were used which are SEO, Content Marketing, Social Media Marketing and Email Marketing.
+
+## SEO 
+
+### Site title and Extra Title
+To improve SEO, 'RetroResell' has been added as title along with the
+extra title 'Your Source for Retro Videogaming', which is the slogan of the website.
+
+### Keywords
+For the search of suitable keywords for my website I initially used wordtracker.com. Since the free trial only allowed two searches, I used Google search results as primary way of finding suitable keywords. To check the popularity of certain Short-tail and Long-tail keywords, I also checked the 'Related Searches' and 'People also ask' sections on Google. In my search for keywords I aimed at coming up with keywords that have high volume aswell as low competition. I came up with this list of relevant keywords that are most suitable for improving the site's ranking in search engine results, ranking the keywords by the number of search results:
+
+**Short-tail keywords:**
+
+- Video Games
+- Nintendo
+- Playstation
+- Super Nintendo
+- Buy Gameboy
+- Retro Games
+- Nintendo 64
+- Playstation Portable
+- Retro Console
+- Super Gameboy
+- Gameboy Color
+- Retrogaming Shop
+
+**Long-tail keywords:**
+- Buy old Video Games
+- Buy Video Games Online
+- Used Video Games
+- Vintage Video Games
+- Second Hand Video Games 
+- Super Mario Games
+- Retro Video Games
+- Buy Super Nintendo
+- Retro Video Game Consoles
+- Onlineshop for Video Games
+
+These keywords are listed in the Meta block of the head section in the base.html to improve the SEO. Moreover, many keywords can be found in various parts of the website, as in e.g. product descriptions and the navigation bar.
+
+### Content Marketing
+As part of the content marketing strategy, authenticated users and customers can write comments about the products that are sold on the website. By giving the opportunity of writing comments and recommendations for products, users are engaged in giving their opinion about their favorite and least favorite products. Recommendations can send incentives to potential customers and can be considered as mouth to mouth marketing. Moreover, user engagement generates traffic on the website which benefits to the SEO ranking.
+
+### Social Media Marketing
+
+For a social media marketing approach, a Facebook MockUp Business Page has been created, that represents the business. Different current offers of the website are presented as posts that draw the attention of the subscribers to different kind of products that are on sale. The profile picture is the website's logo and the banner shows some of the website's products as well as the slogan.
+
+<details>
+  <summary>Facebook Mockup Page</summary>
+<img src="https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/facebook_mock_up.png?raw=true"><br>
+</details>
+
+Beside the Facebook Mock Up Page, there are Social Media clickable icons in the footer of the website, which by click open up a new tab to the respective social media site landing page. At this momement, there are no real social media pages provided to those links that represent the company, but these could be added in the future.
+
+### Email Marketing
+
+Visitors of the website can find a newsletter signup form in the footer where they can fill in their email without any further registration to receive a potential  newsletter via email that provides information about sales and new products of the website. The newsletter is handled by [Mailchimp](https://mailchimp.com/de/?currency=EURFor). For the time being, visitors can enter their email address to signup but will not receive any actual newsletter, as this is not in the scope of this project.
+
+### Favicon
+To further enhance Branding, a Favicon, representing the business's logo, has been implemented to the website.
+
+#### Robots.txt and Sitemaps.xml
+
+To further enhance the website's SEO ranking, a robots.txt and a sitemap.xml file have been created. The robots.txt file informs search engines to avoid certain areas of the website. The sitemap.xml file was created using the xml-sitemaps.com website to provide a comprehensible understanding of the website's structure to search engines. By having a sitemap.xml file, search engines will crawl every important page on the website which enhances indexing.
+
 ## Design
 The design choices of the website are lead by the idea to present a modern online-shop that combines modern, simple design with elements that emphasize Retro Videogaming. For that reason, the interface has a modern touch, while the main background and the offered products present the vibrant style of Retro Videogames. 
 
@@ -222,17 +291,17 @@ After clicking the 'Secure Checkout' button, the user is directed to the 'Checko
 After clicking on the 'Complete Order' button, the user is directed to the 'Checkout Success' page, where a summary of the order is provided and a success toast message will pop up in the top right corner of the website.
 ![Checkout Success](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/checkout_success.PNG?raw=true)
 After placing the order, users will receive a confirmation email with all the details of their order.
-![Confirmation Email]()
+![Confirmation Email](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/confirmation_email.PNG?raw=true)
 
 ### Logged In User Ordering
 The ordering process for logged in users is the same as for guest users. The only difference is that the delivery information of the logged in user will be  prefilled with the details that the logged in user has provided in 'My Profile'. Logged in users are only asked to fill in their name and Credit Card number for successful checkout.
-![Logged In checkout]()
+![Logged In checkout](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/logged_in_checkout.PNG?raw=true)
 
 ## My Profile
 By clicking the 'My Account' icon and selecting the 'My Profile' dropdown menu option, logged in users can observe and update their delivery information and view their order history. If a logged in user wants to update their information, they can fill in the information in the respective field and press the 'Update Information' button. After pressing the button, the logged in user can see a success toast message pop up in the top right corner of the website.
-![Update Info]()
+![Update Info](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/update_info.PNG?raw=true)
 On the right side, logged in users can see their order history. By clicking one of the order number hyperlinks, the user is directed to a page where a summary of the order is listed. The toast message in the top right corner of the website informs the user that this is a past confirmation for the order. By pressing the 'Back to Profile' button, users can be redirected back to their profile page.
-![Thank You!]()
+![Thank You!](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/thank_you.PNG?raw=true)
 
 
 ## Wishlist
@@ -255,7 +324,7 @@ After the admin replied to the inquiry, the 'Inquiry Status' field changes to 'A
 When an inquiry has been dealt with or the user decides to delete the inquiry for whatever reason, the user can do this by clicking on the 'Delete Inquiry' button. After clicking, the user is lead to the 'Confirm Inquiry Deletion' page. 
 ![Confirm Inquiry Deletion](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/confirm_inquiry_deletion.PNG?raw=true)
 When clicking on 'Cancel', the user is brought back to the 'Inquiry Details' Page. When clicking on 'Yes', the inquiry will be deleted, the user brought back to the 'Inquiry Details' Page and an info message toast is popping up in the top right corner of the website stating that the inquiry has been deleted.
-![Delete Inquiry]()
+![Delete Inquiry](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/delete_inquiry.PNG?raw=true)
 
 ## Product Management
 As part of the CRUD-functionality, the website admin can create, read, update and delete new products or read, update and delete existing products either in the admin panel or on the front end. To add new products via the frond end, the admin can click on the Product Management dropdown menu option 'Product Management', which will direct the admin to the 'Product Management' page. Here the admin can fill in all fields with the relevant information about the new product to be added.
@@ -268,87 +337,160 @@ When editing or deleting products, a toast message on the top right corner of th
 ![Game Deleted]()
 ![Game Edit]()
 
-## Business Model
-The business model is B2C (Business to Customer) which means that the business sells to private customers only. 
+## Custom 404 Error Page
+A custom 404 error page was created to inform users that they are trying to access a page that does not exist. Clicking on the 'Return to Homepage' button will direct them back to the homepage.
+![404 Error]()
 
-## Marketing Strategies
-For this project several Marketing strategies were used which are SEO, Content Marketing, Social Media Marketing and Email Marketing.
+# Technologies Used
 
-## SEO 
+## Programming Languages
+- HTML
+- CSS
+- JavaScript
+- Python
 
-### Site title and Extra Title
-To improve SEO, 'RetroResell' has been added as title along with the
-extra title 'Your Source for Retro Videogaming', which is the slogan of the website.
+## Work Environments and Hosting
+- [Visual Studio Code](https://code.visualstudio.com/) (IDE)
+- [GitHub](https://github.com/HerFri) (Version Control)
+- [Heroku](https://dashboard.heroku.com/apps) (Site Hosting)
+- [Cloudinary](https://cloudinary.com/) (Serving static media files)
 
-### Keywords
-For the search of suitable keywords for my website I initially used wordtracker.com. Since the free trial only allowed two searches, I used Google search results as primary way of finding suitable keywords. To check the popularity of certain Short-tail and Long-tail keywords, I also checked the 'Related Searches' and 'People also ask' sections on Google. In my search for keywords I aimed at coming up with keywords that have high volume aswell as low competition. I came up with this list of relevant keywords that are most suitable for improving the site's ranking in search engine results, ranking the keywords by the number of search results:
+## Frameworks and Libraries
+- [Django Framework](https://www.djangoproject.com/) (Python Framework)
+- [Django Allauth Library](https://docs.allauth.org/en/latest/) (Authentication)
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/index.html) (Django Forms)
+- [Bootstrap 4.4.1](https://django-crispy-forms.readthedocs.io/en/latest/index.html) (HTML & CSS Framework)
+- [Psycopg2](https://pypi.org/project/psycopg2/) (PostgreSQL Database adapter)
+- [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/) (Python HTTP server for WSGI applications)
+## Database
+- [Elephant SQL](https://www.elephantsql.com/) (PostgreSQL Database Hosting)
+# Programs
+- [Balsamiq](https://balsamiq.com/) (Wireframes)
+- [Lucid Chart](lucid.app) (ERD Diagram)
+- [Stripe](https://stripe.com/en-de) (Payment API)
+- [Mailchimp](https://mailchimp.com/de/?currency=EUR) (Newsletter)
+- [FontAwesome](https://mailchimp.com/de/?currency=EUR) (Icons)
+- [Google Fonts](https://fonts.google.com/) (Font)
 
-**Short-tail keywords:**
+# Testing
+For the testing section, please refer to the file
 
-- Video Games
-- Nintendo
-- Playstation
-- Super Nintendo
-- Buy Gameboy
-- Retro Games
-- Nintendo 64
-- Playstation Portable
-- Retro Console
-- Super Gameboy
-- Gameboy Color
-- Retrogaming Shop
+## Deployment
 
-**Long-tail keywords:**
-- Buy old Video Games
-- Buy Video Games Online
-- Used Video Games
-- Vintage Video Games
-- Second Hand Video Games 
-- Super Mario Games
-- Retro Video Games
-- Buy Super Nintendo
-- Retro Video Game Consoles
-- Onlineshop for Video Games
+This project was deployed using [Heroku](https://heroku.com/), [Cloudinary](https://cloudinary.com/) and [ElephantSQL](https://www.elephantsql.com/). For a full list of libraries refer to [Technologies Used](#technologies-used).
 
-These keywords are listed in the Meta block of the head section in the base.html to improve the SEO. Moreover, many keywords can be found in various parts of the website, as in e.g. product descriptions and the navigation bar.
+#### Installing libraries
 
-### Content Marketing
-As part of the content marketing strategy, authenticated users and customers can write comments about the products that are sold on the website. By giving the opportunity of writing comments and recommendations for products, users are engaged in giving their opinion about their favorite and least favorite products. Recommendations can send incentives to potential customers and can be considered as mouth to mouth marketing. Moreover, user engagement generates traffic on the website which benefits to the SEO ranking.
+The following steps outline all libraries needed for successful deployment on Heroku. All neccessary-requirements and settings updates will not be discussed in this section as they are assumed as logical follow-up steps to installments. For a full explanation of how to install these libraries, refer to the links provided in [Technologies Used](#technologies-used).
 
-### Social Media Marketing
+- Install **Gunicorn** (server used to run Django on Heroku): ``pip3 install django gunicorn``
+- Install **pyscopg2** (connects to PostgreSQL): ``pip 3 install dj_database_url pyscopg2``
+- Install **Cloudinary** (host static files and images): ``pip3 install dj3-Cloudinary-storage``
 
-For a social media marketing approach, a Facebook MockUp Business Page has been created, that represents the business. Different current offers of the website are presented as posts that draw the attention of the subscribers to different kind of products that are on sale. The profile picture is the website's logo and the banner shows some of the website's products as well as the slogan.
 
-<details>
-  <summary>Facebook Mockup Page</summary>
-<img src="https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/facebook_mock_up.png?raw=true"><br>
-</details>
+#### Creating the Heroku App
 
-Beside the Facebook Mock Up Page, there are Social Media clickable icons in the footer of the website, which by click open up a new tab to the respective social media site landing page. At this momement, there are no real social media pages provided to those links that represent the company, but these could be added in the future.
+- Log into Heroku and go to the Dashboard
+- Click **New** and select **Create new app** from the drop-down
+- Name the app appropriately and choose the relevant region, then click **Create App**
 
-### Email Marketing
+#### Create a PostgreSQL database using ElephantSQL
 
-Visitors of the website can find a newsletter signup form in the footer where they can fill in their email without any further registration to receive a potential  newsletter via email that provides information about sales and new products of the website. The newsletter is handled by [Mailchimp](https://mailchimp.com/de/?currency=EURFor). For the time being, visitors can enter their email address to signup but will not receive any actual newsletter, as this is not in the scope of this project.
+This is necessary to create a database that can be accessed by Heroku. The database provided by Django can not be accessed by the deployed Heroku app.
 
-### Favicon
-To further enhance Branding, a Favicon, representing the business's logo, has been implemented to the website.
+- Log into ElephantSQL and go to Dashboard
+- Click **Create New Instance**
+- Set up a plan by providing a Name (project name) and select a Plan (for this project the free plan "Tiny Turtle" was chosen). Tags are optional.
+- Click **Select Region** and choose appropriate Datacenter
+- Click **Review**, check all details and click **Create Instance**
+- Return to Dashboard on click on the name of the newly created instance
+- Copy the database URL from the details section
 
-#### Robots.txt and Sitemaps.xml
+#### Hiding sensitive information
 
-To further enhance the website's SEO ranking, a robots.txt and a sitemap.xml file have been created. The robots.txt file informs search engines to avoid certain areas of the website. The sitemap.xml file was created using the xml-sitemaps.com website to provide a comprehensible understanding of the website's structure to search engines. By having a sitemap.xml file, search engines will crawl every important page on the website which enhances indexing.
+- Create ``env.py`` file and ensure it is included in the ``.gitignore`` file
+- Add ``import os`` to env.py file and set environment variable **DATABASE_URL** to the URL copied from ElephantSQL (``os.environ["DATABASE_URL"]="<copiedURL>"``)
+- Below, set **SECRET_KEY** variable (``os.environ["SECRET_KEY"]="mysecretkey"``, but be more inventive about the key string!)
 
-## Credits
 
-# Images
+#### Update Settings
 
-## Website
+- Add the following code at the top of ``settings.py`` to connect the Django project to env.py:
+    ````
+      import os
+      import dj_database_url
+      if os.path.isfile('env.py'):
+          import env
+    ````
+- Remove the insecure secret key provided by Django in settings.py and refer to a variable in env.py instead (``SECRET_KEY = os.environ.get('SECRET_KEY')``)
+
+- To connect to the new database, replace the provided **DATABASE** variable with 
+    ````
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+    ````
+- Save and migrate all changes made
+
+#### Connecting Heroku to Database
+
+- In the Heroku dashboard, go to **Settings** tab
+- Add new config vars **CLOUDINARY_URL** (value is CLOUDINARY_URL), **DATABASE_URL** (value is database URL), **HEROKU_HOSTNAME** (value is Heroku app), **SECRET_KEY** (value is secret key string) and **PORT** (value "8000")
+
+#### Connect to Cloudinary
+
+- In the Cloudinary dashboard, copy **API Environment variable**
+- In ``env.py`` file, add new variable ``os.environ["CLOUDINARY_URL"] = "<copied_variable"`` and remove ``CLOUDINARY_URL=`` from the variable string
+- Add same variable value as new Heroku config var named **CLOUDINARY_URL**
+- In ``settings.py``, in ``INSTALLED_APPS`` list, above ``django.contrib.staticfiles`` add ``cloudinary_storage``, below add ``cloudinary``
+- To define Cloudinary as static file storage add the following to settings.py
+    ````
+    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    ````
+
+#### Allow Heroku as host
+
+- In ``settings.py`` add
+    ````
+    ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
+    ````
+
+## Development
+
+The following options are available to work with this code or run in a local environment.
+
+### Clone
+
+Changes made to a cloned repository will affect the original one.
+
+- Navigate to the main page of the repository (this could be a forked instance)
+- Click on the **Code** dropdown menu above the list of files
+- Choose a method to copy the URL for the repository: either via **HTTPS**, by using an **SSH key**, or by using **GitHub CLI**
+- In your work environment, open Git Bash and change the current directory to the target location for the cloned repository
+- Type ``git clone`` followed by the copied URL and press enter **Enter**
+
+### Download as ZIP
+
+- Log into GitHub and click on the repository to download ([RetroResell
+](https://github.com/HerFri/RetroResell))
+- Select **Code** and click "Download Zip" file
+- Once the download is completed, extract the ZIP file and use it in your local environment
+
+
+# Credits
+
+## Images
+
+### Website
 The product images of the website are made my me.
 All other image sources are listed here:
 
 - [Background](https://wallpaperaccess.com/4k-retro-gaming)
 
 
-## Facebook Mock Up Business Page
+### Facebook Mock Up Business Page
 
 - [Tick Duck](https://www.duckipedia.de/Datei:Phooey_Duck.png)
 - [Daniel Düsentrieb](https://www.facebook.com/photo/?fbid=196773716033388&set=a.196773686033391&locale=it_IT)
