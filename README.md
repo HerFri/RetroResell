@@ -181,46 +181,58 @@ When clicking on the 'Delete' Button of the comment, logged in users are lead to
 
 ## Register
 Users can register for an account by clicking the dropdown menu item 'Register' of the 'My Account' icon. They will be lead to the Register page, where they are asked to enter their email address, a username and a password.
-![Register]()
+![Register](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/register.PNG?raw=true)
 After registering, the user is asked to verify the E-mail address by following a link that has been sent to their email address.
-![Verify Email]()
+![Verify Email](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/verify_email.PNG?raw=true)
 After following the provided link, the user is asked to confirm the E-mail adress.
-![Confirm E-Mail]()
+![Confirm E-Mail](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/confirm_email.PNG?raw=true)
 After confirming, a success toast message pops up in the top right corner of the website and the user is ready to login.
-![Confirm Success]()
+![Confirm Success](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/confirm_success.PNG?raw=true)
 
 ## Login
 On the login page the user is asked to enter their username and password. If the user is not registered yet, they can click on 'Register'.
-![Login]()
+![Login](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/login.PNG?raw=true)
 If the user enters a wrong username or password they are prompted with the message 'The username and/or password you specified are not correct'.
-![Wrong Password]()
+![Wrong Password](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/wrong_password.PNG?raw=true)
 
 ## Forgot Password
 Users can reset their password in case they forgot it. When clicking on 'Forgot Password?' on the Login page, they will be directed to the 'Password Reset' page. 
-![Password Reset]()
+![Password Reset](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/password_reset.PNG?raw=true)
 After entering the email address and clicking 'Reset My Password', they will be directed to a page with the message that an e-mail with a link has been sent to the e-mail adress the user provided.
-![Password Reset Message]()
+![Password Reset Message](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/password_reset_message.PNG?raw=true)
 After following the link in the e-mail, the user is directed to the 'Change Password' page where they can fill in a new password and change it by pushing the 'Change Password' button.
-![Change Password]()
+![Change Password](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/change_password.PNG?raw=true)
 After pressing the 'Change Password' button, a textfield and a success toast message will inform the user that the password has been changed successfully.
-![Change Password Success]()
+![Change Password Success](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/change_password_success.PNG?raw=true)
 
 ## Logout
 When clicking on 'Logout', users are directed to a page that asks them to to confirm if they really want to log out. After clicking the 'Log Out' button, the user will be logged out of their account.
-![Logout]()
+![Logout](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/logout.PNG?raw=true)
 
 ## Ordering
+### Guest Ordering
 Guest users that did not sign up for an account can order products as well as authenticated users. When no products have been added to the shopping cart yet, a text in the shopping cart page will say that 'Your cart is empty'.
-![Empty cart]()
+![Empty cart](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/empty_cart.PNG?raw=true)
 After adding a product to the cart, a success message toast will pop up in the top right corner of the website, including a summary of the shopping cart providing information about the added products and their quantity, the price excluding delivery costs and a reminder about the required amount to receive free next day delivery. On the bottom of the message toast is a 'Secure Checkout' button that directs the user to the Checkout page.
-![Product Added]()
+![Product Added](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/product_added.PNG?raw=true)
 By clicking the 'Secure Checkout' button the user is directed to the 'Shopping Cart' page where the user can adjust the quantity of the products of the bag or remove them.
-![Shopping Cart Summary]()
+![Shopping Cart Summary](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/shopping_cart_summary.PNG?raw=true)
 After clicking the 'Secure Checkout' button, the user is directed to the 'Checkout' page, where they are asked their personal information like full name, email and delivery address. Users can save their delivery information to their profile for future orders. To finalize the order, users are asked to fill in their Credit Card number for billing.
-![Checkout]()
+![Checkout](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/checkout.PNG?raw=true)
 After clicking on the 'Complete Order' button, the user is directed to the 'Checkout Success' page, where a summary of the order is provided and a success toast message will pop up in the top right corner of the website.
-![Checkout Success]()
+![Checkout Success](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/checkout_success.PNG?raw=true)
+After placing the order, users will receive a confirmation email with all the details of their order.
+![Confirmation Email]()
 
+### Logged In User Ordering
+The ordering process for logged in users is the same as for guest users. The only difference is that the delivery information of the logged in user will be  prefilled with the details that the logged in user has provided in 'My Profile'. Logged in users are only asked to fill in their name and Credit Card number for successful checkout.
+![Logged In checkout]()
+
+## My Profile
+By clicking the 'My Account' icon and selecting the 'My Profile' dropdown menu option, logged in users can observe and update their delivery information and view their order history. If a logged in user wants to update their information, they can fill in the information in the respective field and press the 'Update Information' button. After pressing the button, the logged in user can see a success toast message pop up in the top right corner of the website.
+![Update Info]()
+On the right side, logged in users can see their order history. By clicking one of the order number hyperlinks, the user is directed to a page where a summary of the order is listed. The toast message in the top right corner of the website informs the user that this is a past confirmation for the order. By pressing the 'Back to Profile' button, users can be redirected back to their profile page.
+![Thank You!]()
 
 
 ## Wishlist
@@ -244,6 +256,17 @@ When an inquiry has been dealt with or the user decides to delete the inquiry fo
 ![Confirm Inquiry Deletion](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/confirm_inquiry_deletion.PNG?raw=true)
 When clicking on 'Cancel', the user is brought back to the 'Inquiry Details' Page. When clicking on 'Yes', the inquiry will be deleted, the user brought back to the 'Inquiry Details' Page and an info message toast is popping up in the top right corner of the website stating that the inquiry has been deleted.
 ![Delete Inquiry]()
+
+## Product Management
+As part of the CRUD-functionality, the website admin can create, read, update and delete new products or read, update and delete existing products either in the admin panel or on the front end. To add new products via the frond end, the admin can click on the Product Management dropdown menu option 'Product Management', which will direct the admin to the 'Product Management' page. Here the admin can fill in all fields with the relevant information about the new product to be added.
+![Product Admin]()
+After filling in the information and clicking the 'Add Product' button, the admin will be directed to the product detail page of the newly added product. The product has now been successfully added to the product selection. If no image has been uploaded, a placeholder image will be displayed. Moreover, a info toast message at the top right corner of the website will inform the admin that the game has been successfully added.
+![New Product Page]()
+As an admin, on each product 'Edit' and 'Delete' buttons are displayed so the admin can edit or delete products of the store quite quickly.
+![Edit Delete]()
+When editing or deleting products, a toast message on the top right corner of the website will inform the admin about it.
+![Game Deleted]()
+![Game Edit]()
 
 ## Business Model
 The business model is B2C (Business to Customer) which means that the business sells to private customers only. 
