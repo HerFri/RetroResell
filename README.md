@@ -501,7 +501,12 @@ All other image sources are listed here:
 - [Daniel Düsentrieb](https://www.facebook.com/photo/?fbid=196773716033388&set=a.196773686033391&locale=it_IT)
 - [Donald Duck](https://static.dw.com/image/1205022_804.jpg)
 
-# Code
+## Code
+- [Carousel](https://getbootstrap.com/docs/4.2/components/carousel/)
+- [Core logic/payment](https://stripe.com/docs/payments/accept-a-payment) 
+- [Strie CSS](https://stripe.com/docs/stripe-js)
+- [Arrow Up](https://css-tricks.com/snippets/css/css-triangle)
+- Sliding text: ChatGPT
 
 ## Acknowledgements
 I want to thank the Slack community and the tutors of Code Institute for their very helpful support and valuable criticism!

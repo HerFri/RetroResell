@@ -6,8 +6,7 @@ body {
     background: url(https://res.cloudinary.com/dg39w8c5b/image/upload/v1703265790/retro_controllers_oxaf5o.jpg) no-repeat center center fixed;
     background-size: contain;
     background-repeat: repeat;
-/*    background-attachment: scroll, local; */
-    height: calc(100vh - 164px); /* the eventual height of the top header */
+    height: calc(100vh - 164px);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -29,6 +28,7 @@ body {
 }
 
 /* from Bulma */
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -58,7 +58,7 @@ body {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important; 
     border: 1px solid black;
 }
 
@@ -117,7 +117,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* bootstrap toasts | classes and style taken from CodeInstitute boutique-ado walktrough*/ 
+/* bootstrap toasts | classes and style taken from CodeInstitute boutique-ado walkthrough */ 
 
 .message-container {
     position: fixed;
@@ -332,15 +332,6 @@ input[name='q']::placeholder {
 
 /*  Media Queries */
 
-/* Inquiries */
-
-@media (max-width: 300px) {
-    .delete-inquiry-body {
-        max-width: 90%;
-    }
-}
-
-
 /* Products */
 
 @media (max-width: 300px) {
@@ -462,7 +453,6 @@ input[name='q']::placeholder {
 
 /* Reduce size of newsletter form for smaller displays */
 
-
 @media (max-width: 279px) {
     #mc_embed_signup,
     #mc_embed_signup_scroll,
@@ -502,9 +492,7 @@ input[name='q']::placeholder {
     }
   } 
 
-
-  /* Reduce size of newsletter form for medium displays */
-
+/* Reduce size of newsletter form for medium displays */
 
 @media (max-width: 1199px) {
 #mc_embed_signup {
@@ -514,21 +502,16 @@ input[name='q']::placeholder {
 
 /*  Wishlist */
 
-
 /* Push remove-btn down for screens > width 1200px */
+
 @media (min-width: 1200px) {
     .push-down {
       margin-top: 132px;
     }
   }
 
- /* @media (max-width: 1199px) {
-    .push-down {
-      margin-top: 28px;
-    }
-  } */
-
 /* Push remove-btn down for screens min-width: 992px and max-width: 1199px */
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .push-down {
       margin-top: 28px;
@@ -584,6 +567,12 @@ input[name='q']::placeholder {
     }
 } 
 
+@media (max-width: 300px) {
+    .delete-inquiry-body {
+        max-width: 90%;
+    }
+}
+
 /* adjust paragraphs for small displays */
 
 @media (max-width: 375px) {
@@ -594,11 +583,13 @@ input[name='q']::placeholder {
 }
 
 /* adjust back-button for small displays with max-widht=500px */
+
 .back-btn {
     margin-top: 1vh;
 }
 
 /* adjust menu icons for small displays */
+
 @media (max-width: 375px) {
     .mobile-icon {
         font-size: 8px;
@@ -606,6 +597,7 @@ input[name='q']::placeholder {
 }
 
 /* adjust menu icons for displays > 992px */
+
 @media (min-width: 992px) {
     .list-inline-item {
         font-size: 14px;
@@ -613,6 +605,7 @@ input[name='q']::placeholder {
 }
 
 /* adjust remove button for small displays */
+
 @media (max-width: 576px) {
     .rem-from-wishlist-btn {
       font-size: 14px;
@@ -633,6 +626,7 @@ input[name='q']::placeholder {
   }
 
 /* Slightly larger container on xl screens */
+
 @media (min-width: 1200px) {
   .container {
     max-width: 80%;
@@ -640,6 +634,7 @@ input[name='q']::placeholder {
 }
 
 /* fixed top navbar only on medium and up */
+
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -655,6 +650,7 @@ input[name='q']::placeholder {
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
+
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
@@ -702,6 +698,7 @@ input[name='q']::placeholder {
 }
 
 /* push footer down for different device sizes*/
+
 @media (min-width: 2000px) {
     .min-hgt {
         min-height: 150vh;
@@ -788,6 +785,7 @@ input[name='q']::placeholder {
 }
 
 /* push content down under delivery banner for different device sizes */
+
 @media (min-width: 992px) {
     .push-cart {
         margin-top: 30px;
