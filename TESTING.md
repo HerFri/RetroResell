@@ -201,5 +201,6 @@ Responsiveness has been tested with Google Chrome DevTools. Different small devi
 
 ## Fixed bugs 
 The newsletter signup form had to much of width, which caused overflow on small devices. I fixed this by setting the container of the newsletter form to 'max-width= 90%'.
+
 ![Fixed Bug](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/fixed_bug.PNG?raw=true)
 ![Fixed Bug2](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/fixed_bug2.PNG?raw=true)
