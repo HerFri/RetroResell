@@ -6,12 +6,11 @@ from .models import Inquiry
 from .forms import InquiryForm
 
 
-
 @login_required
 def user_inquiry(request):
-    """ 
-    A view for users to submit Sale Inquiries 
-    or other inquiries and view them 
+    """
+    A view for users to submit Sale Inquiries
+    or other inquiries and view them
     """
     inquiries = Inquiry.objects.filter(user=request.user)
     inquiries = inquiries.order_by('-created_on')
@@ -22,9 +21,11 @@ def user_inquiry(request):
             inquiry = form.save(commit=False)
             inquiry.user = request.user
             inquiry.save()
-            message_text = 'Your inquiry has been submitted successfully and will be reviewed shortly.'
+            message_text = (
+                'Your inquiry has been submitted successfully and will be '
+                'reviewed shortly.')
             messages.info(request, message_text)
-            return redirect('inquiries')    
+            return redirect('inquiries')
     else:
         form = InquiryForm()
 
@@ -34,6 +35,7 @@ def user_inquiry(request):
     }
     return render(request, 'inquiries/inquiries.html', context)
 
+
 @login_required
 def view_inquiry(request, inquiry_id):
     """
@@ -42,7 +44,7 @@ def view_inquiry(request, inquiry_id):
 
     inquiry = get_object_or_404(Inquiry, pk=inquiry_id)
 
-    return render(request, 'inquiries/view_inquiry.html', {'inquiry': inquiry})    
+    return render(request, 'inquiries/view_inquiry.html', {'inquiry': inquiry})
 
 
 @login_required
@@ -58,11 +60,9 @@ def delete_inquiry(request, inquiry_id):
             request, 'Your inquiry has been deleted successfully.'
         )
         return redirect('inquiries')
-    
+
     context = {
         'inquiry': inquiry
     }
 
     return render(request, 'inquiries/delete_inquiry_confirm.html', context)
-
-

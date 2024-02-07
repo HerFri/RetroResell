@@ -9,6 +9,7 @@ from .forms import ProductForm, CommentForm
 
 # Create your views here.
 
+
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -44,17 +45,22 @@ def all_products(request):
             products = products.filter(platform__name__in=platforms)
             platforms = Platform.objects.filter(name__in=platforms)
 
-
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(genre__icontains=query) | Q(platform__name__icontains=query) # i = makes queries case insensitive
+
+            queries = (
+                Q(name__icontains=query) |
+                Q(description__icontains=query) |
+                Q(genre__icontains=query) |
+                Q(platform__name__icontains=query)
+            )
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'	
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
@@ -66,8 +72,9 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
+
 def product_detail(request, product_id):
-    """ A view to show individual product details and 
+    """ A view to show individual product details and
     for posting comments"on indivisual products """
 
     product = get_object_or_404(Product, pk=product_id)
@@ -95,8 +102,9 @@ def product_detail(request, product_id):
             }
             return render(request, 'products/product_detail.html', context)
         else:
-            comment_form = CommentForm()    
+            comment_form = CommentForm()
     return render(request, 'products/product_detail.html', context)
+
 
 @login_required
 def edit_comment(request, comment_id):
@@ -132,10 +140,12 @@ def delete_comment(request, comment_id):
             comment.delete()
             messages.info(request, f'Comment deleted successfully!')
             return redirect('product_detail', product_id=comment.product.pk)
-        return render(request, 'products/delete_comment.html', {'comment': comment})
+        return render(
+            request, 'products/delete_comment.html', {'comment': comment})
     else:
 
         return redirect('product_detail', product_id=comment.product.pk)
+
 
 @login_required
 def add_product(request):
@@ -143,7 +153,7 @@ def add_product(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -151,10 +161,12 @@ def add_product(request):
             messages.info(request, f'Successfully added {product.name}!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error
+            (request, 'Failed to add product. '
+                'Please ensure the form is valid.')
     else:
         form = ProductForm()
-   
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -169,7 +181,7 @@ def edit_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -178,7 +190,8 @@ def edit_product(request, product_id):
             messages.info(request, f'Successfully updated {product.name}!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. '
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -198,7 +211,7 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.info(request, f'{product.name} deleted!')

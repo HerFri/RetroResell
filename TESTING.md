@@ -117,7 +117,63 @@ Delete comment (logged in users) | Logged in users should be able to delete thei
 
 ### HTML
 
-As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.
+| Page       | Result|
+| ---------- | ----- |
+| Home page  | Pass |
+| Products - Sort by price   | Pass |
+| Products - Sort by rating   | Pass |
+| Products – Sorting by category | Pass |
+| Products – Sorting by name | Pass |
+| Products - All Products  | Pass |
+| Search results | Pass |
+| Product Details page  | Pass |
+| Edit comment page  | Pass |
+| Delete comment page  | Pass |
+| Product Management – Add product  | Pass |
+| Product Management – Edit product   | Pass|
+| My profile page  | Pass |
+| Order confirmation  | Pass |
+| My Inquiries page   | Pass |
+| My Inquiry Details  | Pass |
+| My Wishlist page  | Pass |
+| Shopping cart  | Pass |
+| Checkout page  | Pass |
+| Checkout Success page  | Pass |
+| Login page  | Pass |
+| Logout page  | Pass |
+| Register page  | Pass |
+| Forgot Password page  | Pass |
+| Password Reset change page  | Pass |
+| Reset Done page  | Pass |
+| Custom Error pages | Getting IO Error: HTTP resource not retrievable. The HTTP status from the remote server was: 404.  |
+![IO Error 404]()
+
+### CSS
+The Jigsaw CSS-Validator found no error for the CSS files present in the project.
+![Jigzaw Results]()
+
+### Javascript
+No errors were found for JavaScript code when passing through the official Jshin validator.
+#### Shopping Cart
+![bag jshint]()
+
+#### Checkout
+![checkout jshint]()
+
+#### Product Management
+![Product Management jshint]()
+
+#### Products
+![Products jshint]()
+
+#### Profile
+![Profile jshint]()
+
+
+### Python
+- The settings.py file has a message, as the 'auth.password_validation' strings are auto-gemerated by Django.
+![Validator]()
+-All other python files from all apps were successfully passed through the PEP8 validator.
 
 ## Browser Compatibility
 
@@ -129,3 +185,21 @@ As this is a Django project, the HTML couldn't be tested via the site's URL, due
 | Google Chrome | ✔                         | ✔                  | ✔                |
 | Edge          | ✔                         | ✔                  | ✔                |
 | Mozilla       | ✔                         | ✔s                 | ✔                |
+
+
+## Responsiveness
+Responsiveness has been tested with Google Chrome DevTools. Different small devices (Samsung Galaxy S8/Fold, Iphone 6/7/8), medium devices (Ipad Air, NestHub) and desktop have been tested for responsiveness.
+
+| Responsiveness                           | Desktop >1200px | Desktop 1024px | Devices >= 700 iPad Air/Mini, Surface Pro 7 | Devices <699 iPhone SE/ XR/12 Pro/X, Pixel, Samsung Galaxy S8+/ A51/71/Fold |
+| ---------------------------------------- | --------------- | -------------- | ------------------------------------------- | --------------------------------------------------------------------------- |
+| Links, icons and buttons work                               | Yes             | Yes            | Yes                                         | Yes                                                                         |
+| Login,logout, register functions work                              | Yes             | Yes            | Yes                                         | Yes                                                                         |
+| Images, Layout and Content displayed as expected | Yes             | Yes            | Yes                                         | Yes|
+| Ordering process and checkout | Yes             | Yes            | Yes                                         | Yes|
+| Send an inquiry, add user reply and admin reply  | Yes             | Yes            | Yes                                         | Yes|
+| Product administration, add, edit, delete product  | Yes             | Yes            | Yes                                         | Yes|
+
+## Fixed bugs 
+The newsletter signup form had to much of width, which caused overflow on small devices. I fixed this by setting the container of the newsletter form to 'max-width= 90%'.
+![Fixed Bug]()
+![Fixed Bug2]()

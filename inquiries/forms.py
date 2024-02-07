@@ -5,10 +5,10 @@ from .models import Inquiry
 class InquiryForm(forms.ModelForm):
     class Meta:
         model = Inquiry
-        fields = [ 'name', 'email', 'phone_number', 'subject', 
+        fields = ['name', 'email', 'phone_number', 'subject',
                   'order_number', 'image', 'user_message'
-                ]
-    
+                  ]
+
     phone_number = forms.CharField(
         label='Phone Number',
         required=False
@@ -23,12 +23,12 @@ class InquiryForm(forms.ModelForm):
         label='Image',
         required=False
     )
-    
 
     def __init__(self, *args, **kwargs):
-        """ 
+        """
         Add placeholders, remove auto-generated
-        labels and set autofocus on first field add placeholder for inquiry form
+        labels and set autofocus on first field
+        add placeholder for inquiry form
         """
         super().__init__(*args, **kwargs)
         placeholders = {
@@ -40,7 +40,7 @@ class InquiryForm(forms.ModelForm):
             'image': 'Image',
             'user_message': 'User Message',
         }
-        
+
         self.fields['name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
@@ -49,4 +49,3 @@ class InquiryForm(forms.ModelForm):
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].label = False
-        
