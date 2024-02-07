@@ -309,6 +309,10 @@ The empty wishlist looks like the screenshot below, informing the user with a te
 ![Empty Wishlist](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/empty_wishlist.PNG?raw=true)
 If the user added some products to the wishlist, these are listed on the wishlist page. If the user decides to delete a wishlist item, the button 'Remove from Wishlist' can be pressed, leading to deleting the product and showing a toast message on the top right corner of the website.
 ![Delete Wishlist Item](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/delete_wishlist_item.PNG?raw=true)
+If the user adds a product to the wishlist that is already in the wishlist, a toast info message will pop up in the top right corner of the website, stating that this product is already in the wishlist.
+![Wishlist Same]() 
+If the number of wishlist items exceeds five, and the user tries to add another product to the wishlist, a toast info message will pop up in the top right corner, stating that the user reached the maximum number of items in their wishlist.
+![Wishlist Full]()
 
 ## My Inquiries
 Logged in users can enter the 'My Inquiries' page by either clicking on the 'Sell Your Games & Consoles!' navbar menu option or clicking on the 'My Account' icon and clicking on the 'My Inquiries' option. The 'My Inquiries' page consists of the Inquiry form and the Inquiry History section, where all posted inquiries of a user are displayed. Logged in users can post an inquiry about every issue that concerns the website, e.g. complaining about missing items of an order, questions if the order has been sent already or even make sell offers for consoles and games a user might want to sell! The name, email address and subject fields of the Inquiry form are mandatory, so the website admin has the current personal details of the person posting an inquiry and can contact that person back. If a person wants to upload a picture of the order or the items he or she wants to sell, this person can press the 'Upload Image' button and upload an image to complement the inquiry. After filling in the fields, users can click on the 'Submit' button to post the inquiry for review.
@@ -330,16 +334,16 @@ When clicking on 'Cancel', the user is brought back to the 'Inquiry Details' Pag
 As part of the CRUD-functionality, the website admin can create, read, update and delete new products or read, update and delete existing products either in the admin panel or on the front end. To add new products via the frond end, the admin can click on the Product Management dropdown menu option 'Product Management', which will direct the admin to the 'Product Management' page. Here the admin can fill in all fields with the relevant information about the new product to be added.
 ![Product Admin]()
 After filling in the information and clicking the 'Add Product' button, the admin will be directed to the product detail page of the newly added product. The product has now been successfully added to the product selection. If no image has been uploaded, a placeholder image will be displayed. Moreover, a info toast message at the top right corner of the website will inform the admin that the game has been successfully added.
-![New Product Page]()
+![New Product Added](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/new_product_page.PNG?raw=true)
 As an admin, on each product 'Edit' and 'Delete' buttons are displayed so the admin can edit or delete products of the store quite quickly.
-![Edit Delete]()
+![Edit Delete](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/edit_delete.PNG?raw=true)
 When editing or deleting products, a toast message on the top right corner of the website will inform the admin about it.
-![Game Deleted]()
-![Game Edit]()
+![Game Deleted](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/game_deleted.PNG?raw=true)
+![Game Edit](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/game_edit.PNG?raw=true)
 
 ## Custom 404 Error Page
 A custom 404 error page was created to inform users that they are trying to access a page that does not exist. Clicking on the 'Return to Homepage' button will direct them back to the homepage.
-![404 Error]()
+![404 Error](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/404error.PNG?raw=true)
 
 # Technologies Used
 
@@ -373,7 +377,7 @@ A custom 404 error page was created to inform users that they are trying to acce
 - [Google Fonts](https://fonts.google.com/) (Font)
 
 # Testing
-For the testing section, please refer to the file
+For the testing section, please refer to the file [TESTING.md](https://github.com/HerFri/RetroResell/blob/main/TESTING.md).
 
 ## Deployment
 
