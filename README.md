@@ -163,6 +163,7 @@ The color palette was generated on [coolors.co](https://coolors.co/)
 For the main font style I chose the ['Kdam Thmor Pro' font from Google Fonts](https://fonts.google.com/specimen/Kdam+Thmor+Pro), because it presents a modern style that fits to the design of the website. This font is also used for the RetroResell logo at the top-left of the website.
 
 ## Wireframes
+Find the Wireframes of this project here: [Wireframes](https://github.com/HerFri/RetroResell/blob/main/docs/wireframes/wireframes.pdf)
 
 ## Database Structure
 To illustrate my database structure, I used [Lucidchart](lucid.app) to create an ERD-diagram:
@@ -287,7 +288,7 @@ After adding a product to the cart, a success message toast will pop up in the t
 By clicking the 'Secure Checkout' button the user is directed to the 'Shopping Cart' page where the user can adjust the quantity of the products of the bag or remove them.
 ![Shopping Cart Summary](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/shopping_cart_summary.PNG?raw=true)
 After clicking the 'Secure Checkout' button, the user is directed to the 'Checkout' page, where they are asked their personal information like full name, email and delivery address. Users can save their delivery information to their profile for future orders. To finalize the order, users are asked to fill in their Credit Card number for billing.
-![Checkout](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/checkout.PNG?raw=true)
+![Checkout]()
 After clicking on the 'Complete Order' button, the user is directed to the 'Checkout Success' page, where a summary of the order is provided and a success toast message will pop up in the top right corner of the website.
 ![Checkout Success](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/checkout_success.PNG?raw=true)
 After placing the order, users will receive a confirmation email with all the details of their order.
@@ -295,7 +296,7 @@ After placing the order, users will receive a confirmation email with all the de
 
 ### Logged In User Ordering
 The ordering process for logged in users is the same as for guest users. The only difference is that the delivery information of the logged in user will be  prefilled with the details that the logged in user has provided in 'My Profile'. Logged in users are only asked to fill in their name and Credit Card number for successful checkout.
-![Logged In checkout](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/logged_in_checkout.PNG?raw=true)
+![Logged In checkout]()
 
 ## My Profile
 By clicking the 'My Account' icon and selecting the 'My Profile' dropdown menu option, logged in users can observe and update their delivery information and view their order history. If a logged in user wants to update their information, they can fill in the information in the respective field and press the 'Update Information' button. After pressing the button, the logged in user can see a success toast message pop up in the top right corner of the website.
@@ -310,9 +311,9 @@ The empty wishlist looks like the screenshot below, informing the user with a te
 If the user added some products to the wishlist, these are listed on the wishlist page. If the user decides to delete a wishlist item, the button 'Remove from Wishlist' can be pressed, leading to deleting the product and showing a toast message on the top right corner of the website.
 ![Delete Wishlist Item](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/delete_wishlist_item.PNG?raw=true)
 If the user adds a product to the wishlist that is already in the wishlist, a toast info message will pop up in the top right corner of the website, stating that this product is already in the wishlist.
-![Wishlist Same]() 
+![Wishlist Same](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/wishlist_same.PNG?raw=true) 
 If the number of wishlist items exceeds five, and the user tries to add another product to the wishlist, a toast info message will pop up in the top right corner, stating that the user reached the maximum number of items in their wishlist.
-![Wishlist Full]()
+![Wishlist Full](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/wishlist_full.PNG?raw=true)
 
 ## My Inquiries
 Logged in users can enter the 'My Inquiries' page by either clicking on the 'Sell Your Games & Consoles!' navbar menu option or clicking on the 'My Account' icon and clicking on the 'My Inquiries' option. The 'My Inquiries' page consists of the Inquiry form and the Inquiry History section, where all posted inquiries of a user are displayed. Logged in users can post an inquiry about every issue that concerns the website, e.g. complaining about missing items of an order, questions if the order has been sent already or even make sell offers for consoles and games a user might want to sell! The name, email address and subject fields of the Inquiry form are mandatory, so the website admin has the current personal details of the person posting an inquiry and can contact that person back. If a person wants to upload a picture of the order or the items he or she wants to sell, this person can press the 'Upload Image' button and upload an image to complement the inquiry. After filling in the fields, users can click on the 'Submit' button to post the inquiry for review.
@@ -332,7 +333,7 @@ When clicking on 'Cancel', the user is brought back to the 'Inquiry Details' Pag
 
 ## Product Management
 As part of the CRUD-functionality, the website admin can create, read, update and delete new products or read, update and delete existing products either in the admin panel or on the front end. To add new products via the frond end, the admin can click on the Product Management dropdown menu option 'Product Management', which will direct the admin to the 'Product Management' page. Here the admin can fill in all fields with the relevant information about the new product to be added.
-![Product Admin]()
+![Product Admin](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/product_admin.PNG?raw=true)
 After filling in the information and clicking the 'Add Product' button, the admin will be directed to the product detail page of the newly added product. The product has now been successfully added to the product selection. If no image has been uploaded, a placeholder image will be displayed. Moreover, a info toast message at the top right corner of the website will inform the admin that the game has been successfully added.
 ![New Product Added](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/new_product_page.PNG?raw=true)
 As an admin, on each product 'Edit' and 'Delete' buttons are displayed so the admin can edit or delete products of the store quite quickly.
