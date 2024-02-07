@@ -288,15 +288,15 @@ After adding a product to the cart, a success message toast will pop up in the t
 By clicking the 'Secure Checkout' button the user is directed to the 'Shopping Cart' page where the user can adjust the quantity of the products of the bag or remove them.
 ![Shopping Cart Summary](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/shopping_cart_summary.PNG?raw=true)
 After clicking the 'Secure Checkout' button, the user is directed to the 'Checkout' page, where they are asked their personal information like full name, email and delivery address. Users can save their delivery information to their profile for future orders. To finalize the order, users are asked to fill in their Credit Card number for billing.
-![Checkout]()
+![Checkout](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/checkout.PNG?raw=true)
 After clicking on the 'Complete Order' button, the user is directed to the 'Checkout Success' page, where a summary of the order is provided and a success toast message will pop up in the top right corner of the website.
 ![Checkout Success](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/checkout_success.PNG?raw=true)
 After placing the order, users will receive a confirmation email with all the details of their order.
 ![Confirmation Email](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/confirmation_email.PNG?raw=true)
 
 ### Logged In User Ordering
-The ordering process for logged in users is the same as for guest users. The only difference is that the delivery information of the logged in user will be  prefilled with the details that the logged in user has provided in 'My Profile'. Logged in users are only asked to fill in their name and Credit Card number for successful checkout.
-![Logged In checkout]()
+The ordering process for logged in users is the same as for guest users. The only difference is that the delivery information of the logged in user will be prefilled with the details that the logged in user has provided in 'My Profile'. Logged in users are only asked to fill in their name and Credit Card number for successful checkout.
+![Logged In checkout](https://github.com/HerFri/RetroResell/blob/main/docs/readme-images/logged_in_checkout.PNG?raw=true)
 
 ## My Profile
 By clicking the 'My Account' icon and selecting the 'My Profile' dropdown menu option, logged in users can observe and update their delivery information and view their order history. If a logged in user wants to update their information, they can fill in the information in the respective field and press the 'Update Information' button. After pressing the button, the logged in user can see a success toast message pop up in the top right corner of the website.
