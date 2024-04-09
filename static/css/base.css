@@ -14,14 +14,6 @@ body {
     font-family: 'Kdam Thmor Pro';
 }
 
-.navbar {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly; 
-    padding: 0.5rem 1rem;
-}
-
 .white-bg {
     background: white;
 }
